@@ -1,0 +1,9 @@
+/dist
+/node_modules
+/import
+
+# Lock files
+#/package-lock.json
+yarn.lock
+
+*.ndjson

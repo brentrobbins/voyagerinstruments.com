@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+:root {
+  /* Brand colors */
+  --brand-primary: #1C6AA3;
+  --brand-primary--inverted: #ffffff;
+  --brand-secondary: #212121;
+  --brand-secondary--inverted: #3c1609;
+  --header-inverted: #F0F0F0;
+  /* Typography */
+  --font-family-sans-serif: 'Source Sans Pro';
+  --font-size-base: 18px;
+  --text-color: var(--brand-secondary--inverted);
+  /* Main Navigation */
+  --main-navigation-color: var(--brand-secondary);
+  --main-navigation-color--inverted: var(--header-inverted);
+
+}
+

@@ -1,0 +1,51 @@
+@import '../../../../styles/custom-media.css';
+@import '../../../../styles/custom-properties.css';
+@import '../../../../styles/typography.module.css';
+
+
+.contentviews__wrapper {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  @media (--media-min-large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+  @media (--media-min-xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+  }
+}
+.contentviews__innercontent_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 30px 0;
+  @media (--media-min-large) {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 60px 0;
+  } */
+  @nest & a {
+    display: block;
+    width: 100%;
+  }
+}
+.contentviews__image_wrapper {
+  flex: none;
+  /* width: 350px; */
+  width: 100%;
+  margin: 0 60px 0 0;
+  order: 1;
+}
+.contentviews__content_wrapper {
+  order: 2;
+}

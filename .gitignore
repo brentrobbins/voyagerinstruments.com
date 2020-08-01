@@ -1,0 +1,20 @@
+# Mac files
+.DS_Store
+
+# Dependency directories
+/node_modules
+
+# lerna files
+/lerna-debug.log
+
+# Lock files
+#package-lock.json
+#/yarn.lock
+
+# ENV files
+web/.env.production
+web/.env.development
+web/.env
+# web/package-lock.json
+# Local Netlify folder
+.netlify

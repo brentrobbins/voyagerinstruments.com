@@ -1,0 +1,19 @@
+http://voyagerinstruments.netlify.app/* https://voyagerinstruments.com/:splat 301!
+http://voyagerinstruments.netlify.com/* https://voyagerinstruments.com/:splat 301!
+http://voyagerinstruments.com/* https://voyagerinstruments.com/:splat 301!
+https://voyagerinstruments.com/* https://voyagerinstruments.com/:splat 301!
+http://www.voyagerinstruments.com/* https://voyagerinstruments.com/:splat 301!
+https://www.voyagerinstruments.com/* https://voyagerinstruments.com/:splat 301!
+http://compasshighschool.org/* https://voyagerinstruments.com/:splat 301!
+https://compasshighschool.org/* https://voyagerinstruments.com/:splat 301!
+http://www.compasshighschool.org/* https://voyagerinstruments.com/:splat 301!
+https://www.compasshighschool.org/* https://voyagerinstruments.com/:splat 301!
+
+/our-team/ /staff/ 301!
+/campus/ /tour-our-campus/ 301!
+/salary-policy/ /salary-schedule-and-policies/
+/giving/ /donate/
+/pac/ /parent-action-council/
+/contribute/ /school-fees/
+/resources/ /research-and-resources/
+/volunteer/ /get-involved/
