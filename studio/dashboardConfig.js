@@ -12,10 +12,10 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '5f00dc168ed8b87d5a6a2117',
+                  buildHookId: '5f25db35903f160c53af412d',
                   title: 'voyagerinstruments.com Frontend Website',
                   name: 'voyagerinstruments',
-                  apiId: 'abd4c9d3-f21b-4d46-9046-34a9d06176a2'
+                  apiId: '9fbe81e9-6713-427a-b548-d576b8c08091'
                 }
               ]
             }
@@ -42,7 +42,7 @@ export default {
       options: {
         sites: [
           {
-            siteUrl: 'https://voyagerinstruments-org-6166644563.gtsb.io/'
+            siteUrl: 'https://voyagerinstruments-com-1531837545.gtsb.io/'
           }
         ]
       }

@@ -8,7 +8,7 @@ import EditIcon from 'part:@sanity/base/edit-icon'
 import IframePreview from './src/components/previews/iframe/IframePreview'
 
 // Web preview configuration
-const remoteURL = 'https://voyagerinstruments-org-6166644563.gtsb.io'
+const remoteURL = 'https://voyagerinstruments-com-1531837545.gtsb.io'
 const localURL = 'http://localhost:8000'
 const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
