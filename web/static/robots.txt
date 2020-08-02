@@ -1,7 +1,3 @@
 User-agent: *
 
-Disallow: /contact-us/thank-you
-Disallow: /facility-rental/thank-you
-Disallow: /dev-404-page
-Disallow: /404
-Disallow: /404.html
+Disallow: /

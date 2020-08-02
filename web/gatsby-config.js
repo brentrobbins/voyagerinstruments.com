@@ -56,13 +56,14 @@ module.exports = {
         ...clientConfig.sanity,
         token: process.env.GATSBY_SANITY_READ_TOKEN,
         watchMode: !isProd,
-        overlayDrafts: !isProd
+        overlayDrafts: false
+        // overlayDrafts: !isProd
       }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-81024453-1'
+        trackingId: ''
       }
     },
     {
