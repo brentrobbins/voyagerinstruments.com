@@ -2,7 +2,7 @@
 @import '../../styles/custom-properties.css';
 
 .root {
-  box-shadow: 0 0 5px rgba(19,15,19,0.25);
+  /* box-shadow: 0 0 5px rgba(19,15,19,0.25); */
   width: 100%;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@
   .nav ul li ul li a {
     color: #fff;
     margin: 0;
-    font-size: .9rem;
+    font-size: .7rem;
   }
   .nav ul li ul:before {
     content:"";

@@ -16,7 +16,7 @@
   @media (--media-min-xxlarge2) {
     padding: 2rem 0;
   }
-  background-color: #00aeef;
+  background-color: #f1f1f1;
   color: #383838;
   @nest & a {
     color: #383838;
@@ -65,7 +65,7 @@
     font-weight: 900;
     font-size: 1.3rem;
     @media (--media-min-large) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
     @media (--media-min-xxlarge) {
       font-size: 2rem;
@@ -80,7 +80,7 @@
     padding: 1rem;
   }
   @media (--media-min-large) {
-    padding: 1.2rem;
+    padding: .9rem;
   }
   background-color: #1a1a1a;
   color: #fff;
@@ -132,7 +132,7 @@
     font-weight: 900;
     font-size: 1.3rem;
     @media (--media-min-large) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
     @media (--media-min-xxlarge) {
       font-size: 2rem;
@@ -161,10 +161,10 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 40px;
-  @media (--media-min-large) {
+  @media (--media-min-medium) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
   }
   @media (--media-min-xlarge) {
     grid-gap: 40px;

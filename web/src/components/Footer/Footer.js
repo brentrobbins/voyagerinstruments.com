@@ -83,22 +83,12 @@ export default function Footer () {
 
             <div className={styles.footerTopSecond}>
               {/* Footer Navigation */}
-              <h3>Quick Links</h3>
+              {/* <h3>Quick Links</h3> */}
               <Navigation nav={data.footerNav} />
             </div>
 
-            <div className={styles.footerTopThird}>
-              {/* Footer Image */}
-
-              {data.site.footerContent.footerImage && data.site.footerContent.footerImage.asset && (<Img loading='eager' fluid={data.site.footerContent.footerImage.asset.fluid} style={{maxWidth: '453px'}} />)}
-              {/* Footer Contact/Address */}
-              <div className={styles.addressWrapper}>
-                {data.site._rawFooterContent.footerAddressFirstColumn && <PortableText blocks={data.site._rawFooterContent.footerAddressFirstColumn} />}
-                {data.site._rawFooterContent.footerAddressSecondColumn && <PortableText blocks={data.site._rawFooterContent.footerAddressSecondColumn} />}
-              </div>
-            </div>
-
           </div>
+
         </div>
       </footer>
       <footer className={styles.footerBottom} >
