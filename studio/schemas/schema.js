@@ -16,7 +16,6 @@ import navigation from './documents/navigation'
 import post from './documents/post'
 import category from './documents/category'
 import tag from './documents/tag'
-import career from './documents/career'
 
 // Object types
 import siteLink from './objects/siteLink'
@@ -30,12 +29,10 @@ import pdfFile from './objects/pdfFile'
 import slideImage from './objects/slideImage'
 import imageGallery from './objects/imageGallery'
 import iframe from './objects/iframe'
-import location from './objects/location'
 import link from './objects/link'
 import singleLink from './objects/singleLink'
 import logo from './objects/logo'
 import alert from './objects/alert'
-import person from './objects/person'
 import contentLayout from './objects/contentComponents/contentLayout'
 import columnContent from './objects/contentComponents/columnContent'
 import sectionHeading from './objects/contentComponents/sectionHeading'
@@ -51,9 +48,6 @@ import homeHeader from './objects/homeHeader'
 import contentOptions from './objects/contentComponents/contentOptions'
 import contentViews from './objects/contentComponents/contentViews'
 import webform from './documents/webform'
-import team from './documents/team'
-import partner from './documents/partner'
-import organization from './objects/organization'
 import flexibleContentOptions from './objects/contentComponents/flexibleContentOptions'
 import flexibleContentLayout from './objects/contentComponents/flexibleContentLayout'
 import flexibleContentLayoutOptions from './objects/contentComponents/flexibleContentLayoutOptions'
@@ -89,7 +83,6 @@ export default createSchema({
     slideImage,
     imageGallery,
     iframe,
-    location,
     link,
     singleLink,
     logo,
@@ -104,16 +97,11 @@ export default createSchema({
     layoutOptions,
     imageBackground,
     alert,
-    person,
-    career,
     footerContent,
     homeHeader,
     contentOptions,
     contentViews,
     webform,
-    team,
-    partner,
-    organization,
     flexibleContentOptions,
     flexibleContent,
     flexibleContentLayout,

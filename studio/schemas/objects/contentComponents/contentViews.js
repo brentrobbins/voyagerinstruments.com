@@ -16,14 +16,7 @@ export default {
       options: {
         list: [
           {title: 'View - Blog Post', value: 'blogPostView'},
-          {title: 'View - Community Partner', value: 'communityPartnerView'},
-          {title: 'View - Staff', value: 'staffView'},
-          {title: 'View - Board', value: 'boardView'},
-          {title: 'View - Careers', value: 'careersView'},
-          {title: 'Community Funded - Donate', value: 'cfDonate'},
-          {title: 'Community Funded - School Fees', value: 'cfSchoolFees'},
           {title: 'Webform - Contact', value: 'wfContact'},
-          {title: 'Webform - Facility Rental', value: 'wfFacilityRental'},
           {title: 'Google Search', value: 'googleSearch'}
         ]
       }

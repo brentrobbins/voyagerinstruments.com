@@ -11,7 +11,7 @@ import styles from '../../../Page/page.module.css'
 const Page = ({title, content, thankYou, emailto, subject}) => {
   const data = useStaticQuery(graphql`
     {
-      sanityWebform(_id: {eq: "3a4ed370-a214-451e-a8e7-23557b71c713"}) {
+      sanityWebform(_id: {eq: "b4d5e39a-d2d7-4818-91b4-fe0e0f337309"}) {
         id
         title
         formSettings {

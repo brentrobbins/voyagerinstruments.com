@@ -22,10 +22,7 @@ const hiddenDocTypes = listItem =>
     'home',
     'page',
     // 'contact',
-    'career',
     'webform',
-    'team',
-    'partner',
     'landingPage',
     'post',
     'category',
@@ -98,16 +95,6 @@ export default () =>
             )
         ),
 
-      // S.listItem()
-      //   .title('Contact')
-      //   .icon(MdEmail)
-      //   .child(
-      //     S.editor()
-      //       .id('contact-singleton')
-      //       .schemaType('contact')
-      //       .documentId('contact')
-      //   ),
-
       S.listItem()
         .title('Blog Posts')
         .schemaType('post')
@@ -138,32 +125,9 @@ export default () =>
         .child(S.documentTypeList('tag').title('Tags')),
 
       S.listItem()
-        .title('Team')
-        .icon(MdPeople)
-        .child(
-          S.editor()
-            .id('team-singleton')
-            .schemaType('team')
-            .documentId('team')
-        ),
-      S.listItem()
-        .title('Partners')
-        .icon(FaHandsHelping)
-        .child(
-          S.editor()
-            .id('partner-singleton')
-            .schemaType('partner')
-            .documentId('partner')
-        ),
-      S.listItem()
         .title('Webforms')
         .schemaType('webform')
         .child(S.documentTypeList('webform').title('Webforms')),
-      S.listItem()
-        .title('Careers')
-        .schemaType('career')
-        .child(S.documentTypeList('career').title('Careers')),
-
       S.listItem()
         .title('Navigation')
         .schemaType('navigation')
