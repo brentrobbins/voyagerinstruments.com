@@ -11,8 +11,8 @@ export default {
       title: 'Layout Style',
       name: 'layoutStyle',
       type: 'string',
-      description: 'Required',
-      validation: Rule => Rule.required(),
+      // description: 'Required',
+      // validation: Rule => Rule.required(),
       of: [{type: 'string'}],
       options: {
         list: [
@@ -24,16 +24,21 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
-      description: 'Required',
-      validation: Rule => Rule.required()
+      type: 'string'
+      // description: 'Required',
+      // validation: Rule => Rule.required()
     },
     {
       name: 'subTitle',
       title: 'Sub Title',
       type: 'text',
-      rows: 2,
-      description: 'Optional'
+      rows: 2
+      // description: 'Optional'
+    },
+    {
+      name: 'subText',
+      title: 'Sub Text',
+      type: 'bodyPortableText'
     },
     {
       title: 'Content Options',

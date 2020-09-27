@@ -4,6 +4,7 @@
 
 
 .sectionheading__wrapper {
+  text-align: left;
   margin: 0 0 1rem 0;
   @media (--media-min-medium) {
     margin: 0 0 2rem 0;

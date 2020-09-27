@@ -7,6 +7,7 @@ export default {
   icon: Icon,
   liveEdit: false,
   __experimental_actions: ['update', 'publish', 'create', 'delete'],
+
   fields: [
     {
       name: 'title',

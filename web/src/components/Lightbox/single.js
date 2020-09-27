@@ -5,6 +5,7 @@ import '@reach/dialog/styles.css'
 import styles from './lightbox.module.css'
 
 export default function Lightbox ({image}) {
+  console.log({image})
   const [showLightbox, setShowLightbox] = useState(false)
 
   useEffect(() => {
