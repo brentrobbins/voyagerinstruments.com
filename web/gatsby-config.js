@@ -67,20 +67,13 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Montserrat`,
-            subsets: [`latin`],
-            variants: [`400`, `700`, `900`]
-          },
-          {
-            family: `Open Sans`,
-            subsets: [`latin`],
-            variants: [`400`, `700`]
-          }
-        ]
+          `Montserrat:400,700,900`,
+          `Open Sans:400,700`
+        ],
+        display: 'swap'
       }
     },
     // XMLSitemap

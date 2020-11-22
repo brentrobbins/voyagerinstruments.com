@@ -38,34 +38,6 @@ async function createBlogPostPages (graphql, actions) {
     })
   })
 
-  // Landing pages
-  const landingPage = graphql(`
-  {
-    allSanityLandingPage {
-      edges {
-        node {
-          slug {
-            current
-          }
-        }
-      }
-    }
-  }`).then(landingPage => {
-    if (landingPage.errors) {
-      Promise.reject(landingPage.errors)
-    }
-    const landingPages = landingPage.data.allSanityLandingPage.edges.map(({node}) => node)
-    landingPages.forEach(landingPage => {
-      actions.createPage({
-        path: `/${landingPage.slug.current}/`,
-        component: require.resolve('./src/templates/landingPage.js'),
-        context: {
-          slug: landingPage.slug.current
-        }
-      })
-    })
-  })
-
   // Blog Post pages
   const post = graphql(`
   {
@@ -205,7 +177,7 @@ async function createBlogPostPages (graphql, actions) {
   })
 
   // Return a Promise which would wait for both the queries to resolve
-  return Promise.all([page, landingPage, post, tag, category, blog])
+  return Promise.all([page, post, tag, category, blog])
   // return Promise.all([page, post, tag, category, blog])
 }
 exports.createPages = async ({graphql, actions, reporter}) => {
