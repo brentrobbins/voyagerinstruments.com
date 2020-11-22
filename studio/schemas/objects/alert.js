@@ -23,7 +23,7 @@ export default {
       type: 'string',
       description: 'Required. Changing the Alert Type will affect the alert background color.',
       of: [{type: 'string'}],
-      validation: Rule => Rule.required(),
+      // validation: Rule => Rule.required(),
       options: {
         list: [
           {title: 'Warning', value: 'alertWarning'},
@@ -35,7 +35,7 @@ export default {
       title: 'Enable Sitewide Alert',
       name: 'alertEnabled',
       type: 'boolean',
-      validation: Rule => Rule.required(),
+      // validation: Rule => Rule.required(),
       description: 'This needs to be enabled to show on the site.'
     },
     {
@@ -50,14 +50,14 @@ export default {
           .toLowerCase()
           .replace(/\s+/g, '-')
           .slice(0, 200)
-      },
-      validation: Rule => Rule.required()
+      }
+      // validation: Rule => Rule.required()
     },
     {
       name: 'alertCookieMaxAge',
       type: 'number',
       title: 'Cookie Maximum Age',
-      validation: Rule => Rule.required(),
+      // validation: Rule => Rule.required(),
       description: 'This is the amount of days you would like the Cookie live in a browser when a user clicked to close an alert. This is typically 30, 60 or 90 days.'
     }
   ]

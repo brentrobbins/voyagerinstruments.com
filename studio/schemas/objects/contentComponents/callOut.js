@@ -55,8 +55,8 @@ export default {
     },
     {
       title: 'Content Options',
-      name: 'contentOptions',
-      type: 'contentOptions'
+      name: 'flexibleContentOptions',
+      type: 'flexibleContentOptions'
     }
   ],
   preview: {

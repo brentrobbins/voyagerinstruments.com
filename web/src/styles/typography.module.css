@@ -126,6 +126,7 @@ h4 {
 .portableText ol li
  {
   line-height: 1.4;
+  word-break: break-word;
 }
 
 .layout__wrapper .portableText p a ,
@@ -138,10 +139,10 @@ h4 {
   transition: all .2s;
   box-sizing: border-box;
   text-decoration: none;
-  box-shadow: inset 0 -3px 0 #268dda;
+  box-shadow: inset 0 -3px 0 #569bbe;
   position: relative;
   @nest &:hover {
-    box-shadow: inset 0 -55px 0 0 #268dda;
+    box-shadow: inset 0 -55px 0 0 #569bbe;
     transition: all .5s;
   }
 }

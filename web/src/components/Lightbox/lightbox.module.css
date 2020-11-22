@@ -32,7 +32,7 @@
   border: none;
   outline: 0;
   /* @nest &:focus {
-    border: 1px solid #268DDA;
+    border: 1px solid #569bbe;
     @nest & > div {
       position: relative;
     }
@@ -79,11 +79,11 @@
   transition: all 0.25s ease;
   @nest &:hover {
     transition: all 0.3s ease;
-    color: #268DDA;
+    color: #569bbe;
   }
   @nest &:hover svg path {
     transition: all 0.3s ease;
-    fill: #268DDA;
+    fill: #569bbe;
   }
 }
 .LightboxNext, .LightboxPrev {

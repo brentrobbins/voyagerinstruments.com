@@ -6,7 +6,7 @@ export default {
   type: 'document',
   icon: Icon,
   liveEdit: false,
-  __experimental_actions: ['update', 'publish', 'create', 'delete'],
+  // __experimental_actions: ['update', 'publish', 'create', 'delete'],
   fields: [
     {
       name: 'title',
@@ -34,8 +34,21 @@ export default {
       },
       type: 'richDate',
       'timezone': 'America/Denver',
-      validation: Rule => Rule.required(),
-      description: 'This can be used to schedule post for publishing'
+      // validation: Rule => Rule.required(),
+      description: 'This can be used to schedule post for publishing. If not used it will be immediately published upon rebuild.'
+    },
+    {
+      name: 'authors',
+      title: 'Author(s)',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'author'
+          }
+        }
+      ]
     },
     {
       name: 'category',
@@ -48,7 +61,7 @@ export default {
       ]
     },
     {
-      title: 'Tags',
+      title: 'Tag(s)',
       name: 'tags',
       type: 'array',
       of: [
@@ -73,7 +86,7 @@ export default {
     },
     {
       name: 'flexibleContentLayout',
-      title: '(new) Content',
+      title: 'Content',
       type: 'array',
       description: 'Add content to your site with this field. There is always four available columns, but the website will only show the columns that have content. So if you add content to only two columns, the site will only show two columns.',
       of: [{
@@ -95,9 +108,16 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'seoSettings.title',
-      description: 'seoSettings.description',
+      subtitle: 'slug.current',
       media: 'mainImage'
+    },
+    prepare (selection) {
+      const {title, subtitle, media} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/blog/${subtitle}`,
+        media: media
+      }
     }
   }
 }

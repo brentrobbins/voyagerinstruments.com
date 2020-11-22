@@ -12,14 +12,8 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Home Hero',
-      name: 'homeHeader',
-      type: 'homeHeader',
-      options: {collapsible: true, collapsed: false}
-    },
-    {
       name: 'flexibleContentLayout',
-      title: '(new) Content',
+      title: 'Content',
       type: 'array',
       description: 'Add content to your site with this field. There is always four available columns, but the website will only show the columns that have content. So if you add content to only two columns, the site will only show two columns.',
       of: [{

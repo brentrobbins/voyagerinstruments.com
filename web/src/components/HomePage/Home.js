@@ -6,10 +6,9 @@ import HomeHero from '../HomeHero'
 
 // import styles from './page.module.css'
 
-const Home = ({content, flexibleContent, hero}) => {
+const Home = ({content, flexibleContent}) => {
   return (
     <>
-      {/* <HomeHero hero={hero} /> */}
       {flexibleContent && <FlexibleContentComponents blocks={flexibleContent} />}
       {content && <ContentComponents blocks={content} />}
     </>

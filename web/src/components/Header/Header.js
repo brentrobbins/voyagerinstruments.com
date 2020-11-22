@@ -34,7 +34,7 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
 
   const data = useStaticQuery(graphql`
   {
-      mainNav:  sanityNavigation(_id: { eq: "3f7cad61-f1e2-4ed3-a443-1636713c0b19" }) {
+      mainNav:  sanityNavigation(_id: { eq: "mainNav" }) {
         links {
           _key
           title
@@ -44,13 +44,6 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
             title
             siteLink
           }
-        }
-      }
-      topMiniNav: sanityNavigation(_id: { eq: "983711ab-6e3b-4fae-90ea-e18cb6b8295f" }) {
-        links {
-          _key
-          title
-          siteLink
         }
       }
   }

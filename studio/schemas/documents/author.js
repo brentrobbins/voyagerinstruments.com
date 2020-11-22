@@ -1,30 +1,36 @@
-// import {RiPagesLine as Icon} from 'react-icons/ri'
+import {MdPerson as Icon} from 'react-icons/fa'
 
 export default {
-  name: 'page',
-  title: 'Super Page',
+  name: 'author',
   type: 'document',
-  // icon: Icon,
-  liveEdit: false,
-  __experimental_actions: ['update', 'publish', 'create', 'delete'],
+  title: 'Author',
+  icon: Icon,
   fields: [
     {
       name: 'title',
-      title: 'Title',
       type: 'string',
-      description: 'Titles should be catchy, descriptive, and not too long',
-      validation: Rule => Rule.required()
+      title: 'Name'
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'This is used to setup the page URL and should not be changed after it is initiall setup or it might break links.',
+      description: 'DO NOT change this or it will break your site.',
       options: {
         source: 'title',
         maxLength: 96
       },
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'image',
+      type: 'mainImage',
+      title: 'Headshot'
+    },
+    {
+      name: 'shortBio',
+      type: 'text',
+      title: 'Short Bio'
     },
     {
       name: 'flexibleContentLayout',
@@ -38,21 +44,22 @@ export default {
     {
       title: 'SEO Settings',
       name: 'seoSettings',
-      type: 'seo',
-      validation: Rule => Rule.required(),
-      options: {collapsible: true, collapsed: true}
+      type: 'seo'
+      // validation: Rule => Rule.required()
     }
   ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'slug.current',
+      media: 'image',
     },
     prepare (selection) {
-      const {title, subtitle} = selection
+      const {title, subtitle, media} = selection
       return {
         title: `${title}`,
-        subtitle: `/${subtitle}`,
+        subtitle: `/blog/author/${subtitle}`,
+        media: media
       }
     }
   }

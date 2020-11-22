@@ -2,7 +2,7 @@ export default {
   name: 'siteSettings',
   type: 'document',
   title: 'Sitewide Settings',
-  __experimental_actions: ['update', 'publish'],
+  // __experimental_actions: ['update', 'publish'],
   liveEdit: false,
   fields: [
     {
@@ -18,17 +18,11 @@ export default {
       options: {collapsible: true, collapsed: true}
     },
     {
-      title: 'Footer Content',
-      name: 'footerContent',
-      type: 'footerContent',
-      options: {collapsible: true, collapsed: true}
-    },
-    {
       title: 'Global SEO (fallback) Settings',
       name: 'seoSettings',
       type: 'seo',
-      options: {collapsible: true, collapsed: true},
-      validation: Rule => Rule.required()
+      options: {collapsible: true, collapsed: true}
+      // validation: Rule => Rule.required()
     }
   ],
   preview: {

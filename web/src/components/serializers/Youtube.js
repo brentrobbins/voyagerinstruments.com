@@ -1,9 +1,9 @@
 import React from 'react'
-import getYouTubeID from 'get-youtube-id'
+import getVideoId from 'get-video-id'
 import {LiteYouTubeEmbed} from 'react-lite-youtube-embed'
 
 function Youtube (props) {
-  const id = getYouTubeID(props.url)
+  const id = getVideoId(props.url)
   if (!id) {
     return <div>Missing YouTube URL</div>
   }

@@ -4,11 +4,11 @@
 .root {
   /* box-shadow: 0 0 5px rgba(19,15,19,0.25); */
   width: 100%;
-  top: 0;
-  left: 0;
+  /* top: 0; */
+  /* left: 0; */
   height: 106px;
-  position: fixed;
-  z-index: 10;
+  /* position: fixed; */
+  /* z-index: 10; */
   background: #fff;
   @media (--media-max-large) {
     height: 60px;
@@ -50,13 +50,13 @@
           padding: 0 0 0 12px;
           font-family: 'Open Sans', sans-serif;
           /* font-weight: 500; */
-          text-transform: uppercase;
+          /* text-transform: uppercase; */
           text-decoration: none;
           @media (--media-min-xlarge) {
             font-size: 13px;
           }
           @nest &:hover {
-            color: #268dda;
+            color: #569bbe;
             transition: all 0.5s ease;
           }
         }
@@ -114,15 +114,15 @@
     }
     @nest & .logoWrapper {
       /* width: 200px; */
-      width: 150px;
+      height: 50px;
       @media (--media-min-large) {
-        width: 150px;
+        height: 50px;
       }
       @media (--media-min-large) {
-        width: 180px;
+        height: 80px;
       }
       @media (--media-min-xxlarge) {
-        width: 260px;
+        height: 120px;
       }
     }
 
@@ -152,13 +152,13 @@
     transition: all 0.5s ease;
   }
   .nav ul li:hover, .nav ul li a:hover {
-    color: #268dda;
+    color: #569bbe;
     transition: all 0.5s ease;
   }
 
   .nav ul li ul li a:hover {
     @media (min-width: 1400px) {
-    color: #268dda;
+    color: #569bbe;
     transition: all 0.5s ease;
     }
   }
@@ -298,7 +298,7 @@
     }
   }
   @nest & .topMainNav li {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     @nest &.hideOnDesktop {
 
       @media (--media-min-large) {
@@ -309,7 +309,7 @@
   @nest & .topMainNav li a {
     display: flex;
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   @media (--media-max-large) {
     position: absolute;

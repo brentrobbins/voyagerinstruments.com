@@ -15,7 +15,7 @@ export default {
       of: [{type: 'string'}],
       options: {
         list: [
-          {title: 'View - Blog Post', value: 'blogPostView'},
+          {title: 'View - Blog Posts', value: 'blogPostView'},
           {title: 'Webform - Contact', value: 'wfContact'},
           {title: 'Google Search', value: 'googleSearch'}
         ]
@@ -30,21 +30,9 @@ export default {
       let viewTitle = title
       // let title = title
       if (title && title === 'blogPostView') {
-        viewTitle = 'View - Blog Post'
-      } else if (title && title === 'communityPartnerView') {
-        viewTitle = 'View - Community Partner'
-      } else if (title && title === 'staffView') {
-        viewTitle = 'View - Staff'
-      } else if (title && title === 'boardView') {
-        viewTitle = 'View - Board'
-      } else if (title && title === 'cfDonate') {
-        viewTitle = 'Community Funded - Donate'
-      } else if (title && title === 'cfSchoolFees') {
-        viewTitle = 'Community Funded - School Fees'
+        viewTitle = 'View - Blog Posts'
       } else if (title && title === 'wfContact') {
         viewTitle = 'Webform - Contact'
-      } else if (title && title === 'wfFacilityRental') {
-        viewTitle = 'Webform - Facility Rental'
       } else if (title && title === 'googleSearch') {
         viewTitle = 'Google Search'
       } else {

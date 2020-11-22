@@ -80,7 +80,7 @@ const CategoryPage = ({data: {sanityCategory: page, allSanityPost: posts}}) => {
         )}
             {/* <Category title={page.title} slug={page.slug.current} posts={postsTest} /> */}
             <div className={styles.pageTitleWrapper}>
-              <h1 className={styles.pageTitle}>Category: {page.title}</h1>
+              <h1 className={styles.pageTitle}>Blog Category: {page.title}</h1>
             </div>
             {postsTest.map(post => (
               <Teaser key={post.id} title={post.title} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} summary={post.summary} />

@@ -9,15 +9,6 @@ export const query = graphql`
     sanityHome {
       title
       _rawFlexibleContentLayout
-      homeHeader {
-        heroBackground {
-          asset {
-            fluid(maxWidth:1440) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
       seoSettings {
         title
         description
@@ -36,7 +27,7 @@ const PagePage = ({data: {sanityHome: page}}) => (
     {page.seoSettings && page.seoSettings.title && page.seoSettings.description && (
       <SEO title={page.seoSettings.title} description={page.seoSettings.description} openGraphImage={page.seoSettings.openGraphImage && page.seoSettings.openGraphImage.asset.url} />
     )}
-    <Home hero={page.homeHeader} flexibleContent={page._rawFlexibleContentLayout} />
+    <Home flexibleContent={page._rawFlexibleContentLayout} />
   </Layout>
 )
 

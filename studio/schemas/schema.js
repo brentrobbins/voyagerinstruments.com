@@ -7,15 +7,17 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import richDate from 'part:@sanity/form-builder/input/rich-date/schema'
 
 // document schemas
+import author from './documents/author'
+import category from './documents/category'
 import page from './documents/page'
 import landingPage from './documents/landingPage'
 import home from './documents/home'
-// import contact from './documents/contact'
 import siteSettings from './documents/siteSettings'
 import navigation from './documents/navigation'
 import post from './documents/post'
-import category from './documents/category'
 import tag from './documents/tag'
+import webform from './documents/webform'
+import submission from './objects/submission'
 
 // Object types
 import siteLink from './objects/siteLink'
@@ -33,21 +35,17 @@ import link from './objects/link'
 import singleLink from './objects/singleLink'
 import logo from './objects/logo'
 import alert from './objects/alert'
-import contentLayout from './objects/contentComponents/contentLayout'
+import vimeo from './objects/vimeo'
+
 import columnContent from './objects/contentComponents/columnContent'
 import sectionHeading from './objects/contentComponents/sectionHeading'
 import cta from './objects/contentComponents/cta'
 import textBlock from './objects/contentComponents/textBlock'
 import callOut from './objects/contentComponents/callOut'
 import imageComponent from './objects/contentComponents/imageComponent'
-import vimeo from './objects/vimeo'
-import layoutOptions from './objects/contentComponents/layoutOptions'
 import imageBackground from './objects/contentComponents/imageBackground'
-import footerContent from './objects/footerContent'
-import homeHeader from './objects/homeHeader'
-import contentOptions from './objects/contentComponents/contentOptions'
+// import contentOptions from './objects/contentComponents/contentOptions'
 import contentViews from './objects/contentComponents/contentViews'
-import webform from './documents/webform'
 import flexibleContentOptions from './objects/contentComponents/flexibleContentOptions'
 import flexibleContentLayout from './objects/contentComponents/flexibleContentLayout'
 import flexibleContentLayoutOptions from './objects/contentComponents/flexibleContentLayoutOptions'
@@ -62,21 +60,25 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    richDate,
+
+    // documents:
     siteSettings,
+    post,
+    category,
     page,
     landingPage,
     home,
-    post,
-    category,
     tag,
-    // contact,
+    author,
+    submission,
+    // objects:
+    bodyPortableText,
     mainImage,
+    richDate,
     siteLink,
     navigation,
     seo,
     form,
-    bodyPortableText,
     youtube,
     slideshow,
     pdfFile,
@@ -86,7 +88,6 @@ export default createSchema({
     link,
     singleLink,
     logo,
-    contentLayout,
     columnContent,
     sectionHeading,
     cta,
@@ -94,17 +95,17 @@ export default createSchema({
     callOut,
     imageComponent,
     vimeo,
-    layoutOptions,
     imageBackground,
     alert,
-    footerContent,
-    homeHeader,
-    contentOptions,
+    // contentOptions,
     contentViews,
     webform,
     flexibleContentOptions,
     flexibleContent,
     flexibleContentLayout,
     flexibleContentLayoutOptions
+
+    // When added to this list, object types can be used as
+    // { type: 'typename' } in other document schemas
   ])
 })

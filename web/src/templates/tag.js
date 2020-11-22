@@ -75,7 +75,7 @@ const TagPage = ({data: {sanityTag: page, allSanityPost: posts}}) => {
         (<SEO title={page.seoSettings.title} description={page.seoSettings.description} openGraphImage={page.seoSettings.openGraphImage ? page.seoSettings.openGraphImage.asset.url : null} />
         )}
             <div className={styles.pageTitleWrapper}>
-              <h1 className={styles.pageTitle}>Tag: {page.title}</h1>
+              <h1 className={styles.pageTitle}>Blog Tag: {page.title}</h1>
             </div>
             {postsTest.map(post => (
               <Teaser key={post.id} title={post.title} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} summary={post.summary} />

@@ -25,7 +25,16 @@ export default {
         Rule.required()
       ],
       title: 'Email Address To',
-      description: 'Add a single or multiple email addresses to where this form should be sent to. For example: brent@voyagerinstruments.com, team@voyagerinstruments.com'
+      description: 'Add a single or multiple email addresses to where this form should be sent to. For example: jane@example.com, john@example.com'
+    },
+    {
+      name: 'emailfrom',
+      type: 'string',
+      validation: Rule => [
+        Rule.required()
+      ],
+      title: 'Email Address From',
+      description: 'Add a single email address where this form should be sent from. For example: no-reply@example.com'
     }
   ]
 }

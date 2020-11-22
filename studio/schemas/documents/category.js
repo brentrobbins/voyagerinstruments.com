@@ -27,5 +27,18 @@ export default {
       type: 'seo'
       // validation: Rule => Rule.required()
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'slug.current',
+    },
+    prepare (selection) {
+      const {title, subtitle} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/blog/category/${subtitle}`,
+      }
+    }
+  }
 }

@@ -10,32 +10,9 @@ export default function Footer () {
   {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
-      _rawFooterContent
-      footerContent {
-          footerImage {
-            alt
-            asset {
-              fluid(maxWidth:453) {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-          footerLogos {
-          _key
-          title
-          link
-          logoImage {
-            asset {
-              url
-              fluid(maxWidth:50) {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-        }
-      }
+
     }
-    footerNav: sanityNavigation(_id: { eq: "24cf3910-28f2-4b53-bea3-18499946a07d" }) {
+    footerNav: sanityNavigation(_id: { eq: "footerNav" }) {
       links {
         _key
         title
@@ -58,28 +35,6 @@ export default function Footer () {
         <div className={styles.footerWrapper}>
 
           <div className={styles.footerTopWrapper}>
-
-            <div className={styles.footerTopFirst}>
-              {/* Footer Message - {body && <PortableText blocks={body} />} */}
-              {data.site._rawFooterContent.footerMessage && <PortableText blocks={data.site._rawFooterContent.footerMessage} />}
-              {/* Footer Logos */}
-              <ul className={styles.footerLogos}>
-                {data.site.footerContent.footerLogos.map(logo => (
-                  <li key={logo._key}>
-                    {logo.link.includes('https') || logo.link.includes('http') ? (
-                      <a href={logo.link} target='_blank' rel='noopener noreferrer'>
-                        {logo.logoImage.asset && (
-                          <Img loading='eager' fluid={logo.logoImage.asset.fluid} alt={logo.title} style={{maxWidth: '50px'}} />)}
-                      </a>
-                    ) : (
-                      <Link to={logo.link}>
-                        {logo.logoImage.asset && (<Img loading='eager' fluid={logo.logoImage.asset.fluid} alt={logo.title} style={{maxWidth: '50px'}} />)}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             <div className={styles.footerTopSecond}>
               {/* Footer Navigation */}

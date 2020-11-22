@@ -11,12 +11,13 @@ import styles from '../../../Page/page.module.css'
 const Page = ({title, content, thankYou, emailto, subject}) => {
   const data = useStaticQuery(graphql`
     {
-      sanityWebform(_id: {eq: "b4d5e39a-d2d7-4818-91b4-fe0e0f337309"}) {
+      sanityWebform(_id: {eq: "webform"}) {
         id
         title
         formSettings {
           thankyou
           emailto
+          emailfrom
           subject
         }
       }
@@ -37,15 +38,15 @@ const Page = ({title, content, thankYou, emailto, subject}) => {
 
   // Google Recaptcha
   let recaptchaLoaded = function () {
-    // console.log('Loaded')
+    console.log('Recaptcha Loaded')
   }
   let expiredCallback = function () {
-    // console.log('expired')
+    console.log('expired')
     setIsVerified(false)
     setRecaptchaResponse(null)
   }
   let verifyCallback = function (response) {
-    // console.log(response)
+    console.log(response)
     if (response) {
       setIsVerified(true)
       setRecaptchaResponse(response)
@@ -60,11 +61,11 @@ const Page = ({title, content, thankYou, emailto, subject}) => {
   }
   const handleSubmit = e => {
     e.preventDefault()
-    // console.log({e})
+    console.log({e})
 
     if (isVerified && formValues.first_name && formValues.last_name && formValues.email && formValues.message) {
-      // console.log('valid form')
-      // console.log({formValues})
+      console.log('valid form')
+      console.log({formValues})
       setFormErrors(false)
 
       const form = e.target
@@ -73,7 +74,7 @@ const Page = ({title, content, thankYou, emailto, subject}) => {
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: encode({
           'to': data.sanityWebform.formSettings.emailto,
-          'from': 'no-reply@voyagerinstruments.com',
+          'from': data.sanityWebform.formSettings.emailfrom,
           'subject': data.sanityWebform.formSettings.subject,
           ...formValues,
           recaptcha: recaptchaResponse
@@ -82,11 +83,11 @@ const Page = ({title, content, thankYou, emailto, subject}) => {
         .then(() => navigate(form.getAttribute('action')))
         .catch(error => console.error(error))
     } else {
-      // console.log('invalid form')
+      console.log('invalid form')
       setFormErrors(true)
     }
   }
-
+  console.log({data})
   return (
     <>
       <Helmet>
@@ -96,7 +97,7 @@ const Page = ({title, content, thankYou, emailto, subject}) => {
       {content && <ContentComponents blocks={content} />}
 
       <form
-        name={'voyagerinstruments.com Contact Form'}
+        name={data.sanityWebform.formSettings.subject}
         method='post'
         action={data.sanityWebform.formSettings.thankyou}
         onSubmit={handleSubmit}

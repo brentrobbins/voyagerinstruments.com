@@ -21,14 +21,27 @@ export default {
       validation: Rule => [
         Rule.required()
       ]
+    },
+    {
+      title: 'Form Submissions',
+      name: 'formSubmissions',
+      type: 'array',
+      of: [{
+        type: 'submission'
+      }]
     }
   ],
   preview: {
     select: {
       title: 'title',
-      subtitle: 'seoSettings.title',
-      description: 'seoSettings.description',
-      media: 'mainImage'
+      subtitle: 'slug.current'
+    },
+    prepare (selection) {
+      const {title, subtitle} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/${subtitle}`
+      }
     }
   }
 }

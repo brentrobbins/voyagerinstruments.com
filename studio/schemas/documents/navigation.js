@@ -6,7 +6,7 @@ export default {
   type: 'document',
   icon: MdMenu,
   liveEdit: false,
-  __experimental_actions: ['update', 'publish'],
+  // __experimental_actions: ['update', 'publish'],
   fields: [
     {
       name: 'title',
@@ -24,10 +24,5 @@ export default {
         type: 'siteLink'
       }]
     }
-  ],
-  preview: {
-    select: {
-      title: 'title'
-    }
-  }
+  ]
 }

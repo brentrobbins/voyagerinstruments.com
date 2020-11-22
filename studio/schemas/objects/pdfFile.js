@@ -14,7 +14,8 @@ const PDFPreview = ({value}) => {
   let PDFpath = value.file.asset._ref
   PDFpath = PDFpath.replace('file-', '')
   PDFpath = PDFpath.replace('-pdf', '')
-  PDFpath = `https://cdn.sanity.io/files/a29bfri3/production/${PDFpath}.pdf`
+  // PDFpath = `https://cdn.sanity.io/files/${process.env.SANITY_STUDIO_API_PROJECT_ID}/production/${PDFpath}.pdf`
+  PDFpath = ''
 
   return (
     <>

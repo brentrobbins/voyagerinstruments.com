@@ -1,4 +1,4 @@
-import {AiFillTags as Icon} from 'react-icons/ai'
+import {MdLocalOffer as Icon} from 'react-icons/ai'
 
 export default {
   name: 'tag',
@@ -30,5 +30,18 @@ export default {
       type: 'seo'
       // validation: Rule => Rule.required()
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'slug.current',
+    },
+    prepare (selection) {
+      const {title, subtitle} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/blog/tag/${subtitle}`,
+      }
+    }
+  }
 }

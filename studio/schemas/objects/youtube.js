@@ -2,7 +2,7 @@ import React from 'react'
 
 import {IoLogoYoutube as Icon} from 'react-icons/md'
 
-import getYouTubeID from 'get-youtube-id'
+import getVideoId from 'get-video-id'
 
 const wrapperYoutube = {
   position: 'relative', paddingBottom: '56.25%'
@@ -21,7 +21,7 @@ const wrapperYoutubeImage = {
 }
 
 const YouTubePreview = ({value}) => {
-  const id = getYouTubeID(value.url)
+  const id = getVideoId(value.url)
   const url = `https://www.youtube-nocookie.com/embed/${id}?modestbranding=1`
   if (!id) {
     return <div>Missing YouTube URL</div>
@@ -39,7 +39,7 @@ const YouTubePreview = ({value}) => {
   )
 }
 const YouTubePreviewImage = ({value}) => {
-  const id = getYouTubeID(value.url)
+  const id = getVideoId(value.url)
   const url = `http://i3.ytimg.com/vi/${id}/hqdefault.jpg`
   if (!id) {
     return <div>Missing YouTube URL</div>

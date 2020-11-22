@@ -34,7 +34,7 @@ const Page = ({title, content, flexibleContent, date, category, tags, mainImage}
               </div>
               )}
             </div>
-            <p className={styles.back}><Link to={`/blog/`}>← Back to Compass Stories</Link></p>
+            <p className={styles.back}><Link to={`/blog/`}>← Back to the Blog</Link></p>
           </div>
 
           {mainImage && (<div className={styles.imageWrapper}>

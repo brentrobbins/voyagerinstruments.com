@@ -16,8 +16,8 @@ const GalleryPreview = ({value}) => {
     let OrigFile = image
     OrigFile = OrigFile.split('-')
     const FileExt = OrigFile.pop()
-    const FileStart = OrigFile.shift()
-    return 'https://cdn.sanity.io/images/a29bfri3/production/' + OrigFile.join('-') + '.' + FileExt + '?w=240&h=150&fit=crop'
+    // const FileStart = OrigFile.shift()
+    return 'https://cdn.sanity.io/images/' + process.env.SANITY_STUDIO_API_PROJECT_ID + '/production/' + OrigFile.join('-') + '.' + FileExt + '?w=240&h=150&fit=crop'
   }
 
   return (

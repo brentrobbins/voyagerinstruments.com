@@ -23,10 +23,6 @@ export default class BlogList extends React.Component {
           <div className='layout__oneCol content__wrapper--whiteBackground'>
             <div className='layout__colOne'>
 
-              <div className={styles.pageTitleWrapper}>
-                <h1 className={styles.pageTitle}>Compass Stories</h1>
-              </div>
-
               {posts.map(post => (
                 <Teaser key={post.id} title={post.title} summary={post.summary} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} />
               ))}
