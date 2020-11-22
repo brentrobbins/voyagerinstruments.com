@@ -49,10 +49,12 @@ export default function Footer () {
       <footer className={styles.footerBottom} >
         <div className={styles.footerWrapper}>
           <div className={styles.footerBottomWrapper}>
-            <span> &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved. Site by: <a href='https://www.variantstudios.com' target='_blank' rel='noopener noreferrer'>Variant Studios</a>.</span>
+            <span> &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved. Voyager Instruments is a Partner Company with <a href="https://www.pioneer-engineering.com/" target="_blank" rel="noopener noreferrer">Pioneer Engineering</a>.</span>
           </div>
         </div>
       </footer>
     </>
   )
 }
+
+<p>.</p>
