@@ -27,7 +27,7 @@ h3.callout__title {
   color: inherit;
   font-size: 1.2rem;
   margin: 0 0 1rem 0;
-  font-family: Merriweather,sans-serif;
+  font-family: var(--font-family-sans);
   font-weight: 900;
   @media (--media-min-xxlarge) {
     font-size: 1.8rem;

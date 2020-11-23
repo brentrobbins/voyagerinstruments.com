@@ -49,17 +49,19 @@ body {
 
 
 .layout__wrapper {
-  padding: 1rem 0;
-  margin: 1rem 0;
+  padding: 20px 0;
+  margin: 20px;
   @media (--media-min-large) {
-    margin: 2rem 0;
-    padding: 2rem;
+    margin: 40px 0;
+    padding: 40px;
   }
   @media (--media-min-xxlarge) {
-    /* padding: 2rem; */
+    margin: 60px 0;
+    padding: 60px;
   }
-  @media (--media-min-xxlarge2) {
-    /* padding: 2rem 0; */
+  @media (--media-min-xxxlarge) {
+    margin: 60px 0;
+    padding: 60px;
   }
 
 
@@ -81,8 +83,8 @@ body {
  /* THEMES */
  /* Solid Color Themes */
  .solidBlueTheme {
-  background: #00aeef !important;
-  color: #383838;
+  background: var(--color-blue-dark) !important;
+  color: #fff;
 }
 .solidPinkTheme {
   background: #ed197b !important;
@@ -168,45 +170,64 @@ body {
 }
 
 
-.content__wrapper--whiteBackground {
+/* .content__wrapper--whiteBackground {
   margin: 0 auto 2rem auto;
   padding: 2rem;
   max-width: 1200px;
   background: rgba(255,255,255,.9);
-}
+} */
 
 .layout__oneCol {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .layout__twoCol {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-  padding-bottom: 20px;
+  grid-gap: 10px;
+  padding-bottom: 10px;
   @media (--media-min-large) {
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 20px;
+    grid-gap: 20px;
+  }
+  @media (--media-min-xlarge) {
     padding-bottom: 40px;
     grid-gap: 40px;
+  }
+  @media (--media-min-xxlarge) {
+    padding-bottom: 60px;
+    grid-gap: 60px;
   }
 }
 .layout__threeCol {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-  padding-bottom: 20px;
+  grid-gap: 10px;
+  padding-bottom: 10px;
   @media (--media-min-large) {
+    grid-gap: 20px;
+    padding-bottom: 20px;
+  }
+  @media (--media-min-xlarge) {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
     padding-bottom: 40px;
+    grid-gap: 40px;
+  }
+  @media (--media-min-xxlarge) {
+    padding-bottom: 60px;
+    grid-gap: 60px;
   }
 }
 .layout__fourCol {
@@ -219,17 +240,18 @@ body {
   padding-bottom: 20px;
   @media (--media-min-large) {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    padding-bottom: 40px;
+    grid-gap: 20px;
+    padding-bottom: 20px;
   }
   @media (--media-min-xlarge) {
     grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 40px;
     grid-gap: 40px;
   }
-  /* @media (--media-min-xlarge) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-  } */
+  @media (--media-min-xxlarge) {
+    padding-bottom: 60px;
+    grid-gap: 60px;
+  }
 }
 
 .youtubeWrapper {
@@ -277,46 +299,40 @@ body {
   transition: all .2s;
   box-sizing: border-box;
   text-decoration: none;
-  box-shadow: inset 0 -3px 0 #569bbe;
+  box-shadow: inset 0 -3px 0 var(--color-gray-light);
   position: relative;
   @nest &:hover {
-    box-shadow: inset 0 -55px 0 0 #569bbe;
+    box-shadow: inset 0 -55px 0 0 var(--color-gray-light);
     transition: all .5s;
   }
 }
 
-/* Community Funded */
-.cf-giving-event .giving-event-sticky {
-  top: 60px !important;
-  box-shadow: 0 4px 8px 2px rgba(19,15,19,0.25) !important;
-  @media (--media-min-large) {
-    top: 100px !important;
-  }
-}
-
-
 /* FLEXIBLE CONTENT */
 
 .whiteBackground {
-  /* margin: 0 auto 2rem auto; */
-  /* padding: 2rem; */
-  /* max-width: 1200px; */
   background: rgba(255,255,255,.8);
 }
 
-.flexible__layout--wrapper {
+/* .flexible__layout--wrapper {
 
-}
+} */
+
 .flexible__content--wrapper {
   max-width: 1440px;
 }
 .flexible__content.content__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 10px;
 
   @media (--media-min-large) {
-    padding: 2rem;
+    padding: 20px;
+  }
+  @media (--media-min-xlarge) {
+    padding: 40px;
+  }
+  @media (--media-min-xxlarge) {
+    padding: 60px;
   }
 
   @nest &.verticalAlignmentCenter {
@@ -335,14 +351,7 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 0 !important;
-  padding-right: 0 !important; */
 }
-
-/* date picker */
-/* .react-datepicker-wrapper {
-  width: 100%;
-} */
 
 
 /*  IMAGES */
@@ -383,11 +392,18 @@ body {
   width: 100%;
 }
 
+
+/* date picker */
+/* .react-datepicker-wrapper {
+  width: 100%;
+} */
+
 .react-datepicker-wrapper,
 .react-datepicker__input-container{
   display: block !important;
   width: 100% !important;
 }
+
 .react-datepicker__time-container,
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box
 {
@@ -408,11 +424,7 @@ body {
 }
 .react-datepicker-popper {
   left: -10px !important;
-
 }
-
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
   font-size: 13px;
 }
-
-

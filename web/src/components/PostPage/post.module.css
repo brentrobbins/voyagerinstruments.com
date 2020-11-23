@@ -330,7 +330,7 @@ form, div {
   color: #B71C1F;
   background: #F8F8F8;
   font-size: 1.2rem;
-  font-family: 'Merriweather', sans-serif;
+  font-family: var(--font-family-sans);
   border: solid 2px #ebcfd0;
 }
 

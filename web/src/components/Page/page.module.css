@@ -34,7 +34,7 @@ form, div {
     text-transform: uppercase;
     margin: 1rem 0 .2rem 0;
     display: block;
-    font-family: 'Merriweather', sans-serif;
+    font-family: var(--font-family-sans);
   }
 
   @nest & input.customInput {

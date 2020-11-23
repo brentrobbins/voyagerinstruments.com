@@ -10,9 +10,9 @@
   } */
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   @media (--media-min-large) {
-    margin-top: 106px;
+    /* margin-top: 106px; */
   }
 }
 

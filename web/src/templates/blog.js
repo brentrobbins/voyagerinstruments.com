@@ -19,7 +19,7 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
 
-        <div className='layout__wrapper  noTopMargin noBottomMargin dotsBlueTheme'>
+        <div className='layout__wrapper  noTopMargin noBottomMargin'>
           <div className='layout__oneCol content__wrapper--whiteBackground'>
             <div className='layout__colOne'>
 

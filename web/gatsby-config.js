@@ -71,7 +71,8 @@ module.exports = {
       options: {
         fonts: [
           `Montserrat:400,700,900`,
-          `Open Sans:400,700`
+          `Open Sans:400,600,700,800`
+          // reg, semi, bold, extra
         ],
         display: 'swap'
       }

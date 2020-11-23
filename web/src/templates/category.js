@@ -71,7 +71,7 @@ const CategoryPage = ({data: {sanityCategory: page, allSanityPost: posts}}) => {
 
     <Layout title={page.title}>
 
-      <div className='layout__wrapper  noTopMargin noBottomMargin dotsBlueTheme'>
+      <div className='layout__wrapper  noTopMargin noBottomMargin'>
         <div className='layout__oneCol content__wrapper--whiteBackground'>
           <div className='layout__colOne'>
 
