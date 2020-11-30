@@ -33,19 +33,11 @@ export default {
       options: {
         list: [
           {title: 'Solid - Blue', value: 'solidBlueTheme'},
-          {title: 'Solid - Pink', value: 'solidPinkTheme'},
-          {title: 'Solid - Green', value: 'solidGreenTheme'},
-          {title: 'Solid - Light Green', value: 'solidLightGreenTheme'},
+          {title: 'Solid - Dark Blue', value: 'solidDarkBlueTheme'},
+          {title: 'Solid - Darker Blue', value: 'solidDarkerBlueTheme'},
           {title: 'Solid - Light Gray', value: 'solidLightGrayTheme'},
-          {title: 'Solid - Dark Gray', value: 'solidDarkGrayTheme'},
-          {title: 'Dots - Blue', value: 'dotsBlueTheme'},
-          {title: 'Mountains - Blue', value: 'mountainsBlueTheme'},
-          {title: 'Mechanical Parts - Gray', value: 'mechanicalPartsGrayTheme'},
-          {title: 'Shapes - Gray', value: 'shapesGrayTheme'},
-          {title: 'Pencils - Pink', value: 'pencilsPinkTheme'},
-          {title: 'Cube - Pink', value: 'cubePinkTheme'},
-          {title: 'Topo - Yellow', value: 'topoYellowTheme'},
-          {title: 'Curcuit Board - Green', value: 'curcuitBoardGreenTheme'}
+          {title: 'Solid - Gray', value: 'solidGrayTheme'},
+          {title: 'Solid - Black', value: 'solidBlackTheme'}
         ]
       }
     }

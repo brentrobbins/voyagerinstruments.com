@@ -48,8 +48,11 @@
   --font-xxlarge-size: 40px; /* 2.63rem */
   --font-xxlarge-line-height: var(--lh);
 
-  --font-xxxlarge-size: 54px; /*3.25rem*/
+  --font-xxxlarge-size: 54px;
   --font-xxxlarge-line-height: var(--lh);
+
+  --font-xxxxlarge-size: 78px;
+  --font-xxxxlarge-line-height: var(--lh);
 
 
 

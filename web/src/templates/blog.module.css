@@ -30,7 +30,7 @@ h1.pageTitle {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #1e8ced;
+      color: var(--color-blue-dark);
       font-weight: bold;
     }
     @nest &.prev {

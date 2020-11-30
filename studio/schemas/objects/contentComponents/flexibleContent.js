@@ -17,6 +17,7 @@ export default {
         {type: 'sectionHeading'},
         {type: 'callOut'},
         {type: 'imageComponent'},
+        {type: 'hero'},
         {type: 'youtube'},
         {type: 'vimeo'},
         {type: 'contentViews'}

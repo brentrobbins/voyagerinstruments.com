@@ -40,6 +40,7 @@ import vimeo from './objects/vimeo'
 import columnContent from './objects/contentComponents/columnContent'
 import sectionHeading from './objects/contentComponents/sectionHeading'
 import cta from './objects/contentComponents/cta'
+import hero from './objects/contentComponents/hero'
 import textBlock from './objects/contentComponents/textBlock'
 import callOut from './objects/contentComponents/callOut'
 import imageComponent from './objects/contentComponents/imageComponent'
@@ -91,6 +92,7 @@ export default createSchema({
     columnContent,
     sectionHeading,
     cta,
+    hero,
     textBlock,
     callOut,
     imageComponent,

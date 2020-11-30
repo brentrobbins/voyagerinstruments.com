@@ -1,11 +1,11 @@
-import {MdEmail} from 'react-icons/md'
+import {AiOutlineMail} from 'react-icons/ai'
 
 export default {
   name: 'webform',
   title: 'Webforms',
   type: 'document',
   __experimental_actions: ['update', 'publish'],
-  icon: MdEmail,
+  icon: AiOutlineMail,
   liveEdit: false,
   fields: [
     {

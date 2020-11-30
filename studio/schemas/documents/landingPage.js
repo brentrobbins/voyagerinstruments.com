@@ -1,5 +1,5 @@
-import {MdWeb as Icon} from 'react-icons/md'
-
+// import {MdWeb as Icon} from 'react-icons/md'
+import {RiPagesLine as Icon} from 'react-icons/ri'
 export default {
   name: 'landingPage',
   title: 'Landing Page',
@@ -45,15 +45,14 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'slug.current',
+      subtitle: 'slug.current'
     },
     prepare (selection) {
       const {title, subtitle} = selection
       return {
         title: `${title}`,
-        subtitle: `/${subtitle}`,
+        subtitle: `/${subtitle}`
       }
     }
   }
 }
-

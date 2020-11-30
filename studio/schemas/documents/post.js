@@ -1,4 +1,5 @@
-import {FaNewspaper as Icon} from 'react-icons/fa'
+// import {FaNewspaper as Icon} from 'react-icons/fa'
+import {BsNewspaper as Icon} from 'react-icons/bs'
 
 export default {
   name: 'post',

@@ -1,12 +1,12 @@
 import S from '@sanity/desk-tool/structure-builder'
 
-import {MdEmail, MdHome, MdSettings,
-  MdPerson,
-  MdPeople,
-  MdDescription,
-  MdLocalOffer,
-  AiFillTags} from 'react-icons/md'
-import {FaNewspaper, FaHandsHelping} from 'react-icons/fa'
+import {MdMenu, MdPeople} from 'react-icons/md'
+import {FaBolt} from 'react-icons/fa'
+import {BiFileBlank} from 'react-icons/bi'
+import {BsNewspaper} from 'react-icons/bs'
+import {AiOutlineTag, AiOutlineMail, AiOutlineSetting} from 'react-icons/ai'
+import {HiOutlineHome} from 'react-icons/hi'
+import {RiPagesLine} from 'react-icons/ri'
 
 import EyeIcon from 'part:@sanity/base/eye-icon'
 import EditIcon from 'part:@sanity/base/edit-icon'
@@ -57,7 +57,7 @@ export default () =>
     .items([
       S.listItem()
         .title('Site Settings')
-        .icon(MdSettings)
+        .icon(AiOutlineSetting)
         .child(
           S.editor()
             .schemaType('siteSettings')
@@ -65,8 +65,72 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        // Give it a title
+      // Give it a title
+        .title('Pages')
+        .icon(BiFileBlank)
+        .child(
+        // Make a list in the second pane called Portfolio
+          S.list()
+            .title('Pages')
+            .items([
+            // Add the first list item
+              S.listItem()
+                .title('Home page')
+                .icon(HiOutlineHome)
+                .schemaType('home')
+                .child(
+                  S.editor()
+                    .schemaType('home')
+                    .documentId('home')
+                    .title('Home page')
+                ),
+              S.listItem()
+                .title('Super Pages')
+                .schemaType('page')
+                .icon(FaBolt)
+                .child(
+                  S.documentTypeList('page')
+                    .title('Basic Pages')
+                    .child(documentId =>
+                      S.document()
+                        .documentId(documentId)
+                        .schemaType('page')
+                        .views([
+                          S.view.form().icon(EditIcon),
+                          S.view
+                            .component(IframePreview)
+                            .options({previewURL})
+                            .title('Web Preview')
+                            .icon(EyeIcon)
+                        ])
+                    )
+                )
+              //       S.listItem()
+              //         .title('Landing Pages')
+              //         .schemaType('landingPage')
+              //         .icon(RiPagesLine)
+              //         .child(
+              //           S.documentTypeList('landingPage')
+              //             .title('Landing Pages')
+              //             .child(documentId =>
+              //               S.document()
+              //                 .documentId(documentId)
+              //                 .schemaType('landingPage')
+              //                 .views([
+              //                   S.view.form().icon(EditIcon),
+              //                   S.view
+              //                     .component(IframePreview)
+              //                     .options({previewURL})
+              //                     .title('Web Preview')
+              //                     .icon(EyeIcon)
+              //                 ])
+              //             )
+              //         )
+            ])
+        ),
+      S.listItem()
         .title('Blog')
+        .icon(BsNewspaper)
         .child(
           // Make a list in the second pane called Portfolio
           S.list()
@@ -74,10 +138,26 @@ export default () =>
             .items([
               // Add the first list item
               S.listItem()
-                .title('Blog posts')
-                .icon(FaNewspaper)
+                .title('Blog Posts')
+                .icon(BsNewspaper)
                 .schemaType('post')
-                .child(S.documentTypeList('post').title('Blog posts')),
+                .child(
+                  S.documentTypeList('post')
+                    .title('Blog Posts')
+                    .child(documentId =>
+                      S.document()
+                        .documentId(documentId)
+                        .schemaType('post')
+                        .views([
+                          S.view.form().icon(EditIcon),
+                          S.view
+                            .component(IframePreview)
+                            .options({previewURL})
+                            .title('Web Preview')
+                            .icon(EyeIcon)
+                        ])
+                    )
+                ),
               S.listItem()
                 .title('Authors')
                 .icon(MdPeople)
@@ -90,49 +170,15 @@ export default () =>
                 .child(S.documentTypeList('category').title('Categories')),
               S.listItem()
                 .title('Tags')
-                .icon(AiFillTags)
+                .icon(AiOutlineTag)
                 .schemaType('tag')
                 .child(S.documentTypeList('tag').title('Tags'))
             ])
         ),
-
-      S.listItem()
-        // Give it a title
-        .title('Pages')
-        .child(
-          // Make a list in the second pane called Portfolio
-          S.list()
-            .title('Pages')
-            .items([
-              // Add the first list item
-              S.listItem()
-                .title('Home page')
-                // .icon(MdLocalOffer)
-                .schemaType('home')
-                .child(
-                  S.editor()
-                    .schemaType('home')
-                    .documentId('home')
-                    .title('Home page')
-                ),
-
-              S.listItem()
-                .title('Super Pages')
-                // .icon(MdLocalOffer)
-                .schemaType('page')
-                .child(S.documentTypeList('page').title('Super Pages')),
-
-              S.listItem()
-                .title('Landing Pages')
-                // .icon(MdLocalOffer)
-                .schemaType('landingPage')
-                .child(S.documentTypeList('landingPage').title('Landing Pages'))
-            ])
-        ),
-
       S.listItem()
         // Give it a title
         .title('Webforms')
+        .icon(AiOutlineMail)
         .child(
           // Make a list in the second pane called Portfolio
           S.list()
@@ -141,7 +187,7 @@ export default () =>
               // Add the first list item
               S.listItem()
                 .title('Contact form')
-                // .icon(MdLocalOffer)
+                .icon(AiOutlineMail)
                 .schemaType('webform')
                 .child(
                   S.editor()
@@ -155,6 +201,7 @@ export default () =>
       S.listItem()
         // Give it a title
         .title('Navigation')
+        .icon(MdMenu)
         .child(
           // Make a list in the second pane called Portfolio
           S.list()

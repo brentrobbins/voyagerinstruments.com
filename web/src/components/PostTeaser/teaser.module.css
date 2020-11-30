@@ -31,12 +31,12 @@
 
 .postTitle {
   margin: 0 0 5px 0;
-  color: #1e8ced;
+  color: var(--color-blue-dark);
   @media (--media-min-medium) {
     margin: 0 0 10px 0;
   }
   @nest & a {
-    color: #1e8ced;
+    color: var(--color-blue-dark);
     text-decoration: none;
     box-shadow: none;
   }
@@ -57,7 +57,7 @@
     flex-direction: row;
   }
   @nest a {
-    color: #1e8ced;
+    color: var(--color-blue-dark);
   }
 }
 .postCategory {

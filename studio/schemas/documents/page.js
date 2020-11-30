@@ -1,10 +1,12 @@
 // import {RiPagesLine as Icon} from 'react-icons/ri'
+// import {FaBolt as Icon} from 'react-icons/fa'
+import {BiFileBlank as Icon} from 'react-icons/bi'
 
 export default {
   name: 'page',
   title: 'Super Page',
   type: 'document',
-  // icon: Icon,
+  icon: Icon,
   liveEdit: false,
   __experimental_actions: ['update', 'publish', 'create', 'delete'],
   fields: [
@@ -46,13 +48,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'slug.current',
+      subtitle: 'slug.current'
     },
     prepare (selection) {
       const {title, subtitle} = selection
       return {
         title: `${title}`,
-        subtitle: `/${subtitle}`,
+        subtitle: `/${subtitle}`
       }
     }
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionHeading from './SectionHeading'
+import Hero from './Hero'
 import PortableText from './Text'
 import CallOut from './CallOut'
 import ImageComponent from './ImageComponent'
@@ -16,6 +17,9 @@ export default ({content}) => {
     }
     if (content._type === 'sectionHeading') {
       return <SectionHeading content={content} key={content._key} />
+    }
+    if (content._type === 'hero') {
+      return <Hero content={content} key={content._key} />
     }
     if (content._type === 'callOut') {
       return <CallOut content={content} key={content._key} />

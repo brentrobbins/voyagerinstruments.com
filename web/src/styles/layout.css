@@ -49,20 +49,20 @@ body {
 
 
 .layout__wrapper {
-  padding: 20px 0;
-  margin: 20px;
+  padding: 10px 0;
+  margin: 10px;
   @media (--media-min-large) {
-    margin: 40px 0;
-    padding: 40px;
+    margin: 20px 0;
+    padding: 20px;
   }
-  @media (--media-min-xxlarge) {
+  /* @media (--media-min-xxlarge) {
     margin: 60px 0;
     padding: 60px;
   }
   @media (--media-min-xxxlarge) {
     margin: 60px 0;
     padding: 60px;
-  }
+  } */
 
 
   @nest &.verticallyCenterAlign {
@@ -83,21 +83,32 @@ body {
  /* THEMES */
  /* Solid Color Themes */
  .solidBlueTheme {
+  background: var(--color-blue) !important;
+  color: var(--color-blue-darker);
+}
+.solidDarkBlueTheme {
   background: var(--color-blue-dark) !important;
   color: #fff;
 }
-.solidPinkTheme {
-  background: #ed197b !important;
-  color: #0F0F0F;
+.solidDarkerBlueTheme {
+  background: var(--color-blue-darker) !important;
+  color: #fff;
 }
-.solidGreenTheme {
-  background: #86b209 !important;
-  color: #383838;
+
+.solidLightGrayTheme {
+  background: var(--color-gray-light) !important;
+  color: var(--color-blue-darker) !important;
 }
-.solidLightGreenTheme {
-  background: #b8d632 !important;
-  color: #383838;
+.solidGrayTheme {
+  background: var(--color-gray) !important;
+  color: var(--color-blue-darker) !important;
 }
+.solidBlackTheme {
+  background: #000 !important;
+  color: #fff;
+}
+
+
 
 .solidLightGrayTheme {
   background: #ebebeb !important;
@@ -107,48 +118,12 @@ body {
   background: #4d4d4f !important;
   color: #ffffff;
 }
-/* Pattern BG Themes */
-.dotsBlueTheme {
-  background: url('../assets/images/patterns/dots-blue.png') !important;
-  background-repeat: repeat !important;
-  color: #383838;
-}
-.mechanicalPartsGrayTheme {
-  background: url('../assets/images/patterns/parts-gray.png') !important;
-  background-repeat: repeat !important;
-  color: #383838;
-}
-.pencilsPinkTheme {
-  background: url('../assets/images/patterns/pencils-pink.png') !important;
-  background-repeat: repeat !important;
-  color: #0F0F0F;
-}
-.shapesGrayTheme {
-  background: url('../assets/images/patterns/shapes-gray.png') !important;
-  background-repeat: repeat !important;
-  color: #383838;
-}
-.mountainsBlueTheme {
-  background: url('../assets/images/patterns/mountain-pattern-blue.png') !important;
-  background-repeat: repeat !important;
-  color: #383838;
-}
-.topoYellowTheme {
-  background: url('../assets/images/patterns/topo-yellow.png') !important;
-  background-repeat: repeat !important;
-  color: #383838;
-}
 
-.cubePinkTheme {
-  background: url('../assets/images/patterns/cube-pink.png') !important;
-  background-repeat: repeat !important;
-  color: #0F0F0F;
-}
-.curcuitBoardGreenTheme {
+/* .curcuitBoardGreenTheme {
   background: url('../assets/images/patterns/curcuit-board-green.png') !important;
   background-repeat: repeat !important;
   color: #0F0F0F;
-}
+} */
 
 .noTopMargin {
   margin-top: 0 !important;
@@ -311,11 +286,13 @@ body {
 
 .whiteBackground {
   background: rgba(255,255,255,.8);
+  color: var(--color-blue-darker) !important;
 }
 
-/* .flexible__layout--wrapper {
-
-} */
+.flexible__layout {
+  position: relative;
+  overflow: hidden;
+}
 
 .flexible__content--wrapper {
   max-width: 1440px;
@@ -331,9 +308,9 @@ body {
   @media (--media-min-xlarge) {
     padding: 40px;
   }
-  @media (--media-min-xxlarge) {
+  /* @media (--media-min-xxlarge) {
     padding: 60px;
-  }
+  } */
 
   @nest &.verticalAlignmentCenter {
     justify-content: center;

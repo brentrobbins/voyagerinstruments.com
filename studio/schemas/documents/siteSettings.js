@@ -15,7 +15,8 @@ export default {
       name: 'alert',
       title: 'Sitewide Alert',
       type: 'alert',
-      options: {collapsible: true, collapsed: true}
+      options: {collapsible: true, collapsed: true},
+      hidden: true
     },
     {
       title: 'Global SEO (fallback) Settings',
