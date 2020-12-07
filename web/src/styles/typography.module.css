@@ -220,7 +220,7 @@ h4 {
   content: "";
   position: absolute;
   left: 0;
-  top: 1em;
+  top: 13px;
   width: 20px;
   height: 1px;
   background-color: var(--color-accent-dark);
