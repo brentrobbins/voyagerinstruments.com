@@ -1,6 +1,4 @@
 figure {
   max-width: 900px;
-  margin: 3rem auto !important;
-  max-width: 900px;
-  margin: 3rem auto;
+  margin: 0 auto 1rem auto;
 }

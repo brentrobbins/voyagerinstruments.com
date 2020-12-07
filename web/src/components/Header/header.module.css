@@ -107,7 +107,8 @@
     }
     @nest & .logoWrapper {
       margin-top: 10px;
-      width: 175px;
+      margin-bottom: 10px;
+      width: 150px;
       /* height: 50px; */
       @media (--media-min-large) {
         /* height: 50px; */

@@ -2,7 +2,7 @@ import React from 'react'
 // import PortableText from '../serializers/portableText'
 import ContentComponents from '../serializers/contentComponents/index'
 import FlexibleContentComponents from '../serializers/contentComponents/FlexibleContent'
-import HomeHero from '../HomeHero'
+// import HomeHero from '../HomeHero'
 
 // import styles from './page.module.css'
 

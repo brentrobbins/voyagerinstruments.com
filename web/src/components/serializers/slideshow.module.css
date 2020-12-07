@@ -1,3 +1,5 @@
+@import '../../styles/custom-properties.css';
+
 .carousel {
   max-width: 800px;
   margin: 0 auto !important;
@@ -13,4 +15,8 @@
 }
 .carousel.carousel-slider {
   max-width: 640px;
+}
+
+.carousel.carousel-slider .control-arrow {
+  color: var(--color-blue-dark);
 }

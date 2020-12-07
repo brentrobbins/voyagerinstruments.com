@@ -25,12 +25,12 @@
 h3.callout__title {
   /* color: #383838; */
   color: inherit;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin: 0 0 1rem 0;
   font-family: var(--font-family-sans);
   font-weight: 900;
-  @media (--media-min-xxlarge) {
-    font-size: 1.8rem;
+  @media (--media-min-large) {
+    font-size: 2rem;
   }
 }
 

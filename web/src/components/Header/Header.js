@@ -52,7 +52,7 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
   return (
     <>
       <div className={styles.root}>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} style={{zIndex: 2}}>
           <div className={styles.innerWrapper}>
             <nav className={styles.topMiniNav}>
               <Navigation nav={data.topMiniNav} />

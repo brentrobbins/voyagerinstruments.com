@@ -22,8 +22,8 @@ export default {
       title: 'Global SEO (fallback) Settings',
       name: 'seoSettings',
       type: 'seo',
-      options: {collapsible: true, collapsed: true}
-      // validation: Rule => Rule.required()
+      // options: {collapsible: true, collapsed: true}
+      validation: Rule => Rule.required()
     }
   ],
   preview: {

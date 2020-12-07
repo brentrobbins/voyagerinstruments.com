@@ -13,7 +13,7 @@ export default ({node}) => {
 
   return (
     <>
-      <figure style={{maxWidth: '980px', margin: '2rem auto'}}>
+      <figure style={{maxWidth: '980px', margin: '0 auto 1rem auto'}}>
         <Img loading='eager' fluid={fluidProps} alt={node.alt} />
         {/* <figcaption>{node.alt}</figcaption> */}
       </figure>

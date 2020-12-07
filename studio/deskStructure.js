@@ -128,53 +128,54 @@ export default () =>
               //         )
             ])
         ),
-      S.listItem()
-        .title('Blog')
-        .icon(BsNewspaper)
-        .child(
-          // Make a list in the second pane called Portfolio
-          S.list()
-            .title('Blog')
-            .items([
-              // Add the first list item
-              S.listItem()
-                .title('Blog Posts')
-                .icon(BsNewspaper)
-                .schemaType('post')
-                .child(
-                  S.documentTypeList('post')
-                    .title('Blog Posts')
-                    .child(documentId =>
-                      S.document()
-                        .documentId(documentId)
-                        .schemaType('post')
-                        .views([
-                          S.view.form().icon(EditIcon),
-                          S.view
-                            .component(IframePreview)
-                            .options({previewURL})
-                            .title('Web Preview')
-                            .icon(EyeIcon)
-                        ])
-                    )
-                ),
-              S.listItem()
-                .title('Authors')
-                .icon(MdPeople)
-                .schemaType('author')
-                .child(S.documentTypeList('author').title('Authors')),
-              S.listItem()
-                .title('Categories')
-                // .icon(MdLocalOffer)
-                .schemaType('category')
-                .child(S.documentTypeList('category').title('Categories')),
-              S.listItem()
-                .title('Tags')
-                .icon(AiOutlineTag)
-                .schemaType('tag')
-                .child(S.documentTypeList('tag').title('Tags'))
-            ])
-        ),
+      // S.listItem()
+      //   .title('Blog')
+      //   .icon(BsNewspaper)
+      //   .child(
+      //     // Make a list in the second pane called Portfolio
+      //     S.list()
+      //       .title('Blog')
+      //       .items([
+      //         // Add the first list item
+      //         S.listItem()
+      //           .title('Blog Posts')
+      //           .icon(BsNewspaper)
+      //           .schemaType('post')
+      //           .child(
+      //             S.documentTypeList('post')
+      //               .title('Blog Posts')
+      //               .child(documentId =>
+      //                 S.document()
+      //                   .documentId(documentId)
+      //                   .schemaType('post')
+      //                   .views([
+      //                     S.view.form().icon(EditIcon),
+      //                     S.view
+      //                       .component(IframePreview)
+      //                       .options({previewURL})
+      //                       .title('Web Preview')
+      //                       .icon(EyeIcon)
+      //                   ])
+      //               )
+      //           ),
+      //         S.listItem()
+      //           .title('Authors')
+      //           .icon(MdPeople)
+      //           .schemaType('author')
+      //           .child(S.documentTypeList('author').title('Authors')),
+      //         S.listItem()
+      //           .title('Categories')
+      //           // .icon(MdLocalOffer)
+      //           .schemaType('category')
+      //           .child(S.documentTypeList('category').title('Categories')),
+      //         S.listItem()
+      //           .title('Tags')
+      //           .icon(AiOutlineTag)
+      //           .schemaType('tag')
+      //           .child(S.documentTypeList('tag').title('Tags'))
+      //       ])
+      //   ),
+
       S.listItem()
         // Give it a title
         .title('Webforms')
