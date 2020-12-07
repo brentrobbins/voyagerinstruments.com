@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styles from './homehero.module.css'
 
 export default function index ({hero}) {
-  console.log({hero})
+  // console.log({hero})
   return (
     <div className={styles.HomeHeroWrapper}>
       <div className={styles.HomeHeroInnerWrapper}>

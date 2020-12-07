@@ -6,7 +6,7 @@
   height: 106px;
   background: #fff;
   @media (--media-max-large) {
-    height: 60px;
+    height: 70px;
   }
 }
 
@@ -108,7 +108,7 @@
     @nest & .logoWrapper {
       margin-top: 10px;
       margin-bottom: 10px;
-      width: 150px;
+      width: 170px;
       /* height: 50px; */
       @media (--media-min-large) {
         /* height: 50px; */

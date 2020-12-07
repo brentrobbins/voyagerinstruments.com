@@ -6,6 +6,7 @@ require('dotenv').config({
 const clientConfig = require('./client-config')
 
 const isProd = process.env.NODE_ENV === 'production'
+const isGatsbyCloud = process.env.GATSBY_CLOUD === 'true'
 
 var proxy = require('http-proxy-middleware')
 
@@ -55,8 +56,8 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.GATSBY_SANITY_READ_TOKEN,
-        watchMode: !isProd,
-        overlayDrafts: false
+        watchMode: !isProd || !isGatsbyCloud,
+        overlayDrafts: !isProd || isGatsbyCloud
         // overlayDrafts: !isProd
       }
     },

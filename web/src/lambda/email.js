@@ -14,7 +14,7 @@ const formattedDateTime = new Date(Date.now()).toLocaleString()
 
 exports.handler = async (event, context, callback) => {
   const data = querystring.parse(event.body)
-  // console.log({data})
+  console.log({data})
 
   // If no data or email
   if (!data && !data.email) {
