@@ -46,8 +46,8 @@ export default {
       title: 'Link URL',
       name: 'link',
       type: 'url',
-      description: 'Required. Example: For an internal link use: /contact-us/ (include the slashes too). For an external link use the full URL with the https, so Google would be https://google.com',
-      validation: Rule => Rule.uri({'allowRelative': true, scheme: ['https', 'http']}).required()
+      description: 'Example: For an internal link use: /contact-us/ (include the slashes too). For an external link use the full URL with the https, so Google would be https://google.com',
+      validation: Rule => Rule.uri({'allowRelative': true, scheme: ['https', 'http']})
     },
     {
       name: 'mainImage',

@@ -171,10 +171,14 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
   padding-bottom: 10px;
-  @media (--media-min-large) {
+  @media (--media-min-medium) {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 20px;
     grid-gap: 20px;
+    padding-bottom: 20px;
+  }
+  @media (--media-min-large) {
+    padding-bottom: 30px;
+    grid-gap: 30px;
   }
   @media (--media-min-xlarge) {
     padding-bottom: 40px;
@@ -194,12 +198,12 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
   padding-bottom: 10px;
-  @media (--media-min-large) {
+  @media (--media-min-medium) {
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding-bottom: 20px;
   }
-  @media (--media-min-xlarge) {
-    grid-template-columns: repeat(3, 1fr);
+  @media (--media-min-large) {
     padding-bottom: 40px;
     grid-gap: 40px;
   }
@@ -216,10 +220,14 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   padding-bottom: 20px;
-  @media (--media-min-large) {
+  @media (--media-min-medium) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding-bottom: 20px;
+  }
+  @media (--media-min-large) {
+    grid-gap: 40px;
+    padding-bottom: 40px;
   }
   @media (--media-min-xlarge) {
     grid-template-columns: repeat(4, 1fr);
