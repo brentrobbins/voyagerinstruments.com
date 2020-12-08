@@ -65,7 +65,7 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   @media (--media-min-large) {
     font-size: 2.2rem;
   }
