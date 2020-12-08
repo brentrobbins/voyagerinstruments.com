@@ -52,12 +52,12 @@ export default {
       name: 'mainImage',
       type: 'mainImage',
       description: 'Optional'
-    },
-    {
-      title: 'Content Options',
-      name: 'flexibleContentOptions',
-      type: 'flexibleContentOptions'
     }
+    // {
+    //   title: 'Content Options',
+    //   name: 'flexibleContentOptions',
+    //   type: 'flexibleContentOptions'
+    // }
   ],
   preview: {
     select: {

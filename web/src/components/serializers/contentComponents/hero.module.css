@@ -30,7 +30,10 @@
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: -2px;
-  font-size: var(--font-xxxlarge-size);
+  font-size: var(--font-xxlarge-size);
+  @media (--media-min-medium) {
+    font-size: var(--font-xxxlarge-size);
+  }
   @media (--media-min-large) {
     font-size: var(--font-xxxxlarge-size);
   }
@@ -49,8 +52,14 @@
   margin: 0;
   color: inherit;
   display: block;
-  font-size: 40px;
   text-transform: uppercase;
+  font-size: var(--font-xlarge-size);
+  @media (--media-min-medium) {
+    font-size: var(--font-xlarge-size);
+  }
+  @media (--media-min-large) {
+    font-size: var(--font-xxlarge-size);
+  }
   @nest & a {
     color: inherit;
     text-decoration: none;
@@ -75,15 +84,26 @@
   width: auto;
   position: relative;
   z-index: 0;
+  display: inline-block;
 }
 .hero__content {
   z-index: 1;
   position: relative;
-  max-width: 575px;
+
   width: 100%;
   padding: 0;
+  @media (--media-min-large) {
+    max-width: 580px;
+  }
   @nest & p {
     margin: 0;
+    font-size: var(--font-xsmall-size);
+    @media (--media-min-medium) {
+      font-size: var(--font-small-size);
+    }
+    @media (--media-min-large) {
+      font-size: var(--font-medium-size);
+    }
     @nest & a {
       color: inherit;
       text-decoration: none;

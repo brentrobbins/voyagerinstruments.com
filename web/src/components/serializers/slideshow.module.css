@@ -16,7 +16,3 @@
 .carousel.carousel-slider {
   max-width: 640px;
 }
-
-.carousel.carousel-slider .control-arrow {
-  color: var(--color-blue-dark);
-}

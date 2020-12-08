@@ -53,12 +53,12 @@ export default {
       name: 'mainImage',
       type: 'mainImage',
       title: 'Background Image'
-    },
-    {
-      title: 'Content Options',
-      name: 'flexibleContentOptions',
-      type: 'flexibleContentOptions'
     }
+    // {
+    //   title: 'Content Options',
+    //   name: 'flexibleContentOptions',
+    //   type: 'flexibleContentOptions'
+    // }
   ],
   preview: {
     select: {

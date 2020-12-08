@@ -34,12 +34,12 @@ export default {
       type: 'text',
       rows: 2,
       description: 'Optional'
-    },
-    {
-      title: 'Content Options',
-      name: 'flexibleContentOptions',
-      type: 'flexibleContentOptions'
     }
+    // {
+    //   title: 'Content Options',
+    //   name: 'flexibleContentOptions',
+    //   type: 'flexibleContentOptions'
+    // }
   ],
   preview: {
     select: {

@@ -14,7 +14,6 @@ module.exports = {
   siteMetadata: {
     title: `Voyager Instruments`,
     description: `Voyager Instruments.`,
-    // author: `@cccfortcollins`,
     siteUrl: `https://voyagerinstruments.com`
   },
   plugins: [
@@ -58,7 +57,6 @@ module.exports = {
         token: process.env.GATSBY_SANITY_READ_TOKEN,
         watchMode: !isProd || !isGatsbyCloud,
         overlayDrafts: !isProd || isGatsbyCloud
-        // overlayDrafts: !isProd
       }
     },
     {

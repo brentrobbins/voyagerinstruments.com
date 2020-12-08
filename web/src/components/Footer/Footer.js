@@ -35,25 +35,25 @@ export default function Footer() {
           <div className={styles.footerTopWrapper}>
             <div className={styles.footerTopFirst}>
               <h4>VOYAGER INSTRUMENTS COMPANY</h4>
-              <p>912 Smithfield Drive, Suite 4 <br/>
-                Fort Collins, CO 80524</p>
+              <p>
+                912 Smithfield Drive, Suite 4 <br />
+                Fort Collins, CO 80524
+              </p>
             </div>
 
             <div className={styles.footerTopSecond}>
-             <p>
-               <b>Sales Contact</b> <br/>
-               <a href="tel:970-232-9344">
-               (970) 232-9344</a><br/>
-               <a href="mailto:dbradshaw@voyagerinstruments.com">
-                E-mail Dwight</a>
-                </p>
-                <p>
-                  <b>Tech Support Contact</b> <br/>
-                  <a href="tel:970-232-9344">(970) 232-9344</a><br/>
-                  <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Tech Support</a> <br/>
-                </p>
-
-
+              <p>
+                <b>Sales Contact</b> <br />
+                <a href="tel:970-232-9344">(970) 232-9344</a>
+                <br />
+                <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Dwight</a>
+              </p>
+              <p>
+                <b>Tech Support Contact</b> <br />
+                <a href="tel:970-232-9344">(970) 232-9344</a>
+                <br />
+                <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Tech Support</a> <br />
+              </p>
             </div>
 
             <div className={styles.footerTopThird}>
@@ -70,8 +70,8 @@ export default function Footer() {
               {" "}
               &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved.
             </span>
-            <span>Voyager
-              Instruments is a Partner Company with{" "}
+            <span>
+              Voyager Instruments is a Partner Company with{" "}
               <a
                 href="https://www.pioneer-engineering.com/"
                 target="_blank"
@@ -79,7 +79,8 @@ export default function Footer() {
               >
                 Pioneer Engineering
               </a>
-              .</span>
+              .
+            </span>
           </div>
         </div>
       </footer>

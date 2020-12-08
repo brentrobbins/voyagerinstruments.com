@@ -10,12 +10,12 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'bodyPortableText'
-    },
-    {
-      title: 'Content Options',
-      name: 'flexibleContentOptions',
-      type: 'flexibleContentOptions'
     }
+    // {
+    //   title: 'Content Options',
+    //   name: 'flexibleContentOptions',
+    //   type: 'flexibleContentOptions'
+    // }
   ],
   preview: {
     prepare () {
