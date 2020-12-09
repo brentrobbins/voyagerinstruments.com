@@ -23,7 +23,7 @@ const IframeComponent = () => ({
   }
 })
 
-const iframe = '<iframe src="https://docs.google.com/document/d/10rUuZUGRjLYvwVZ-KawWNYLCOb8tOd7BfeVpJgWHBoc/edit?usp=sharing" width="100%" height="1200px"></iframe>'
+const iframe = '<iframe src="https://docs.google.com/document/d/e/2PACX-1vTCzRvADhL3nAYZN-Wx8QJc_fB8xx3vQEow12fj9c_yEosUQJkapjuZst-a-bA9GyV7qPJfQkHZGikN/pub?embedded=true" width="100%" height="1200px"></iframe>'
 
 class MyTool extends React.Component {
   render () {

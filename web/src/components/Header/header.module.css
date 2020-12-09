@@ -112,12 +112,15 @@
       /* height: 50px; */
       @media (--media-min-large) {
         /* height: 50px; */
+        width: 190px;
       }
       @media (--media-min-large) {
         /* height: 80px; */
+        width: 220px;
       }
       @media (--media-min-xxlarge) {
         /* height: 120px; */
+        width: 230px;
       }
     }
     @nest & svg {
