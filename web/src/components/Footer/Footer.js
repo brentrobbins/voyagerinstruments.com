@@ -39,6 +39,7 @@ export default function Footer() {
                 912 Smithfield Drive, Suite 4 <br />
                 Fort Collins, CO 80524
               </p>
+              <p>Contact us at <a href="tel:970-232-9344">(970) 232-9344</a> to discuss your product needs.</p>
             </div>
 
             <div className={styles.footerTopSecond}>
@@ -54,6 +55,7 @@ export default function Footer() {
                 <br />
                 <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Tech Support</a> <br />
               </p>
+
             </div>
 
             <div className={styles.footerTopThird}>

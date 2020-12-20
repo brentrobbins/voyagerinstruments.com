@@ -19,10 +19,10 @@
     padding: 2rem 0;
   }
   @nest & li {
-    font-size: var(--font-base-size);
+    font-size: var(--font-small-size);
   }
   @nest & p {
-    font-size: var(--font-base-size);
+    font-size: var(--font-small-size);
   }
   @nest & a {
     color: var(--color-gray);
@@ -188,6 +188,9 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
+  @nest & h4 {
+    margin-top: 0;
+  }
   @media (--media-min-large) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
