@@ -1,11 +1,11 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
-import PortableText from "../serializers/portableText";
-import Navigation from "../Header/Navigation";
-import styles from "./footer.module.css";
+import React from 'react'
+import {useStaticQuery, graphql, Link} from 'gatsby'
+import Img from 'gatsby-image'
+import PortableText from '../serializers/portableText'
+import Navigation from '../Header/Navigation'
+import styles from './footer.module.css'
 
-export default function Footer() {
+export default function Footer () {
   const data = useStaticQuery(graphql`
     {
       site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
@@ -24,7 +24,7 @@ export default function Footer() {
         }
       }
     }
-  `);
+  `)
   // console.log({data})
   // console.log(data.footerNav)
 
@@ -39,21 +39,21 @@ export default function Footer() {
                 912 Smithfield Drive, Suite 4 <br />
                 Fort Collins, CO 80524
               </p>
-              <p>Contact us at <a href="tel:970-232-9344">(970) 232-9344</a> to discuss your product needs.</p>
+              <p>Contact us at <a href='tel:970-232-9344'>(970) 232-9344</a> to discuss your product needs.</p>
             </div>
 
             <div className={styles.footerTopSecond}>
               <p>
                 <b>Sales Contact</b> <br />
-                <a href="tel:970-232-9344">(970) 232-9344</a>
+                <a href='tel:970-232-9344'>(970) 232-9344</a>
                 <br />
-                <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Dwight</a>
+                <a href='mailto:dbradshaw@voyagerinstruments.com'>E-mail Dwight</a>
               </p>
               <p>
                 <b>Tech Support Contact</b> <br />
-                <a href="tel:970-232-9344">(970) 232-9344</a>
+                <a href='tel:970-232-9344'>(970) 232-9344</a>
                 <br />
-                <a href="mailto:dbradshaw@voyagerinstruments.com">E-mail Tech Support</a> <br />
+                <a href='mailto:dbradshaw@voyagerinstruments.com'>E-mail Tech Support</a> <br />
               </p>
 
             </div>
@@ -69,15 +69,15 @@ export default function Footer() {
         <div className={styles.footerWrapper}>
           <div className={styles.footerBottomWrapper}>
             <span>
-              {" "}
+              {' '}
               &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved.
             </span>
             <span>
-              Voyager Instruments is a Partner Company with{" "}
+              Voyager Instruments is a Partner Company with{' '}
               <a
-                href="https://www.pioneer-engineering.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://www.pioneer-engineering.com/'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 Pioneer Engineering
               </a>
@@ -87,7 +87,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  );
+  )
 }
-
-<p>.</p>;

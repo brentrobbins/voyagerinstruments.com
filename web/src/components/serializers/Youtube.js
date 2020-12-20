@@ -1,6 +1,6 @@
 import React from 'react'
 import getVideoId from 'get-video-id'
-import {LiteYouTubeEmbed} from 'react-lite-youtube-embed'
+// import {LiteYoutubeEmbed} from 'react-lite-yt-embed'
 
 function Youtube (props) {
   if (!props || !props.url) {
@@ -12,11 +12,13 @@ function Youtube (props) {
     return <div>Missing YouTube URL</div>
   }
   return (
-    <LiteYouTubeEmbed
-      id={id}
-      adNetwork={false}
-      noCookie
-    />
+    <iframe width='560' height='315' src={`https://www.youtube.com/embed/${id}?rel=0`} frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen />
   )
 }
 export default Youtube
+{ /* <LiteYoutubeEmbed id={id} params='rel=0' /> */ }
+{ /* <LiteYouTubeEmbed
+      id={id}
+      adNetwork={false}
+      noCookie
+    /> */ }
