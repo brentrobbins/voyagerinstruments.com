@@ -30,6 +30,7 @@ export default function Footer () {
 
   return (
     <>
+      <div className='flexible__layout layout__wrapper  noTopMargin noBottomMargin solidGrayTheme'><div className=''><div className='flexible__content--wrapper layout__oneCol'><div className='layout__colOne flexible__content content__wrapper  noTopPadding noBottomPadding'><div className='portableText'><h5>Contact us at <a href='tel:970-232-9344'>(970) 232-9344</a> to discuss your product needs.</h5></div></div></div></div></div>
       <footer className={styles.footer}>
         <div className={styles.footerWrapper}>
           <div className={styles.footerTopWrapper}>
