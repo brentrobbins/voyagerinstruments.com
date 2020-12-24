@@ -1,3 +1,83 @@
+[[redirects]]
+  from = "http://voyagerinstruments.netlify.app/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://voyagerinstruments.netlify.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://voyagerinstruments.netlify.app/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://voyagerinstruments.netlify.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://voyagerinstruments.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.voyagerinstruments.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://voyagerinstrument.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://voyagerinstrument.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://www.voyagerinstrument.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.voyagerinstrument.com/*"
+  to = "http://voyagerinstruments.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/collections/*"
+  to = "/product-catalog"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/products/*"
+  to = "/product-catalog"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/pages/insight-fds"
+  to = "/insight-fds"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/pages/case-studies"
+  to = "/case-studies"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/pages/what-we-do"
+  to = "/about"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/pages/contact-us"
+  to = "/contact-us"
+  status = 301
+  force = true
 
 [build]
   base = "web/"
