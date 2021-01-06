@@ -1,14 +1,4 @@
 [[redirects]]
-  from = "http://voyagerinstruments.netlify.app/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://voyagerinstruments.netlify.com/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "https://voyagerinstruments.netlify.app/*"
   to = "https://voyagerinstruments.com/:splat"
   status = 301
@@ -19,27 +9,7 @@
   status = 301
   force = true
 [[redirects]]
-  from = "https://www.voyagerinstruments.com/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://voyagerinstrument.com/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "https://voyagerinstrument.com/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://www.voyagerinstrument.com/*"
-  to = "https://voyagerinstruments.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://www.voyagerinstrument.com/*"
   to = "https://voyagerinstruments.com/:splat"
   status = 301
   force = true
