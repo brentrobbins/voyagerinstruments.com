@@ -48,7 +48,7 @@ export default function Footer () {
                 <b>Sales Contact</b> <br />
                 <a href='tel:970-232-9344'>(970) 232-9344</a>
                 <br />
-                <a href='mailto:dbradshaw@voyagerinstruments.com'>E-mail Dwight</a>
+                <a href='mailto:sales@voyagerinstruments.com'>E-mail Sales</a>
               </p>
               <p>
                 <b>Tech Support Contact</b> <br />
