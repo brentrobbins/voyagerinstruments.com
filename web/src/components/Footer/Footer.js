@@ -74,7 +74,7 @@ export default function Footer () {
               &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved.
             </span>
             <span>
-              Voyager Instruments is a Partner Company with{' '}
+              Voyager Instruments is a subsidiary of {' '}
               <a
                 href='https://www.pioneer-engineering.com/'
                 target='_blank'
