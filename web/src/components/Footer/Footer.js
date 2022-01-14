@@ -73,16 +73,12 @@ export default function Footer () {
               {' '}
               &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved.
             </span>
-            <span>
-              Voyager Instruments is a subsidiary of {' '}
+            <span>Voyager is a subsidiary of {' '}
               <a
-                href='https://www.pioneer-engineering.com/'
+                href='https://www.redwolfreliability.com/'
                 target='_blank'
                 rel='noopener noreferrer'
-              >
-                Pioneer Engineering
-              </a>
-              .
+              >Red Wolf Reliability</a> (formerly Pioneer Engineering).
             </span>
           </div>
         </div>
