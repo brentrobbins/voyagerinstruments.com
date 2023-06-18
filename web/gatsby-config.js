@@ -59,10 +59,18 @@ module.exports = {
         overlayDrafts: !isProd || isGatsbyCloud
       }
     },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-124696010-1'
+    //   }
+    // },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        trackingId: 'UA-124696010-1'
+        // id: 'GTM-NR4SLDH',
+        id: 'G-CS9W7NL6V6',
+        includeInDevelopment: false
       }
     },
     {
