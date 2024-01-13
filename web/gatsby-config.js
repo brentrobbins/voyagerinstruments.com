@@ -12,9 +12,9 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: `Voyager Instruments`,
-    description: `Voyager Instruments.`,
-    siteUrl: `https://voyagerinstruments.com`
+    title: `Voyager Dynamics`,
+    description: `Voyager Dynamics.`,
+    siteUrl: `https://www.voyagerdynamics.com`
   },
   plugins: [
     'gatsby-plugin-remove-serviceworker',
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `https://voyagerinstruments.com`
+        siteUrl: `https://voyagerdynamics.com`
       }
     },
     {

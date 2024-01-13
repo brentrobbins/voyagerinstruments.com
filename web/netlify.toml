@@ -1,18 +1,36 @@
 [[redirects]]
-  from = "https://voyagerinstruments.netlify.app/*"
-  to = "https://voyagerinstruments.com/:splat"
+  from = "https://voyagerdynamics.netlify.app/*"
+  to = "https://voyagerdynamics.com/:splat"
   status = 301
   force = true
+[[redirects]]
+  from = "https://voyagerinstruments.netlify.app/*"
+  to = "https://voyagerdynamics.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://voyagerinstruments.netlify.com/*"
-  to = "https://voyagerinstruments.com/:splat"
+  to = "https://voyagerdynamics.com/:splat"
   status = 301
   force = true
 [[redirects]]
-  from = "https://voyagerinstrument.com/*"
-  to = "https://voyagerinstruments.com/:splat"
+  from = "https://voyagerdynamics.netlify.com/*"
+  to = "https://voyagerdynamics.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://voyagerinstrument.com/*"
+  to = "https://voyagerdynamics.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://voyagerinstruments.com/*"
+  to = "https://voyagerdynamics.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/collections/*"
   to = "/product-catalog"
