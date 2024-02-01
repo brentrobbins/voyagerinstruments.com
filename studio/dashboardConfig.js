@@ -13,8 +13,8 @@ export default {
               sites: [
                 {
                   buildHookId: '5f25db35903f160c53af412d',
-                  title: 'voyagerinstruments.com Frontend Website',
-                  name: 'voyagerinstruments',
+                  title: 'voyagerdynamics.com Frontend Website',
+                  name: 'voyagerdynamics',
                   apiId: '9fbe81e9-6713-427a-b548-d576b8c08091'
                 }
               ]
@@ -27,7 +27,7 @@ export default {
             value: 'https://github.com/brentrobbins/voyagerinstruments.com',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://voyagerinstruments.netlify.app', category: 'apps'}
+          {title: 'Frontend', value: 'https://www.voyagerdynamics.com', category: 'apps'}
         ]
       }
     },
@@ -42,7 +42,7 @@ export default {
       options: {
         sites: [
           {
-            siteUrl: 'https://voyagerinstruments-com-1531837545.gtsb.io/'
+            siteUrl: 'https://voyagerdynamics.com/'
           }
         ]
       }

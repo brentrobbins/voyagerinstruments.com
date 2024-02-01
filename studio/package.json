@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "gatsby-sanity-voyagerinstruments-studio",
+  "name": "gatsby-sanity-voyagerdynamics-studio",
   "version": "1.0.0",
   "main": "package.json",
-  "author": "Brent Robbins <brent@voyagerinstruments.com>",
+  "author": "Brent Robbins <brent@variantstudios.com>",
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
