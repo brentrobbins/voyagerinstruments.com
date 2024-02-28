@@ -43,6 +43,11 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
             _key
             title
             siteLink
+            links {
+            _key
+            title
+            siteLink
+          }
           }
         }
       }

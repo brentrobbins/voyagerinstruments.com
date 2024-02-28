@@ -5,19 +5,31 @@ import Arrow from '../../assets/svgs/icons/arrow.svg'
 import styles from './header.module.css'
 
 const SubLinks = (props) => {
-  // console.log({props})
+  const [condition2, setCondition2] = useState(null)
+  console.log({props})
   return (
     <ul className={styles.sublinks} data-depth='1'>
       {props.links.map((sublinks, i) => (
         <li key={i}>
 
-          {sublinks.siteLink.includes('https') || sublinks.siteLink.includes('http') ? (
+          {sublinks?.siteLink?.includes('https') || sublinks?.siteLink?.includes('http') && (
             <a href={sublinks.siteLink} target='_blank' rel='noreferrer' title={sublinks.title}>
               {sublinks.title}
-            </a>
-          ) : (
+            </a>)}
+
+          {sublinks?.siteLink && !sublinks?.siteLink?.includes('https') && !sublinks?.siteLink?.includes('http') && (
             <Link to={sublinks.siteLink} title={sublinks.title}>{sublinks.title}</Link>
           )}
+
+          {/* check if sublinks.links.length >=1
+          {sublinks.links && sublinks.links.length >= 1 &&  (<span>
+
+
+          {sublinks.title}
+          <button className={styles.mobileDropdown} tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition2(condition2 === i ? null : i)}><Arrow /></button>
+
+          </span>)}*/}
+
         </li>
       ))}
     </ul>
@@ -35,7 +47,7 @@ function Navigation ({nav, main, top}) {
       // Has Link
       if (link.siteLink) {
         // External Link
-        if (link.siteLink.includes('https') || link.siteLink.includes('http')) {
+        if (link?.siteLink?.includes('https') || link?.siteLink?.includes('http')) {
           return (<span>
             <a href={link.siteLink} target='_blank' rel='noopener noreferrer' title={link.title}>{link.title}</a>
             <button className={main && styles.mobileDropdown} tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
@@ -76,9 +88,7 @@ function Navigation ({nav, main, top}) {
         {(nav && nav.links) && nav.links.map((links, i) => (
           <li key={i} className={main && `${condition === i ? styles.toggled : ''}`}>
             <SiteLink link={links} i={i} />
-            {links.links && links.links.length
-              ? <SubLinks links={links.links} />
-              : ''}
+            {(links.links && links.links.length) ? <SubLinks links={links.links} /> : undefined}
           </li>
         ))}
       </ul>
