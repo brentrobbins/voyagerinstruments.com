@@ -35,7 +35,7 @@ export default function Footer () {
         <div className={styles.footerWrapper}>
           <div className={styles.footerTopWrapper}>
             <div className={styles.footerTopFirst}>
-              <h4>VOYAGER INSTRUMENTS COMPANY</h4>
+              <h4>VOYAGER DYNAMICS</h4>
               <p>
                 912 Smithfield Drive, Suite 4 <br />
                 Fort Collins, CO 80524
