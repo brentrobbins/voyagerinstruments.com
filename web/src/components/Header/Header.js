@@ -1,84 +1,106 @@
-import {Link, graphql, useStaticQuery} from 'gatsby'
-import React, {useEffect, useState} from 'react'
-// import Image from 'gatsby-image'
-import Navigation from './Navigation'
-
-import Logo from '../../assets/svgs/logo.svg'
-
-import {cn} from '../../lib/helpers'
+import React, {useState} from 'react'
+import {Link} from 'gatsby'
+import Arrow from '../../assets/svgs/icons/arrow.svg'
 
 import styles from './header.module.css'
 
-const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
-  const [mobileStatus, setMobileStatus] = useState(false)
-  // console.log({mainImage})
-  useEffect(() => {
-    const handleEsc = (event) => {
-      if (event.keyCode === 27) {
-        setMobileStatus(mobileStatus === false)
-        // console.log('Close')
-      }
-    }
-    window.addEventListener('keydown', handleEsc)
+const SubLinks = ({links, condition, setCondition, rotation, setRotation}) => {
+  return (
+    <ul className={styles.sublinks} data-depth='1'>
+      {links.map((sublink, i) => (
+        <li key={i}>
+          <span>
+            {sublink.siteLink && sublink.siteLink.startsWith('http') ? (
+              <a href={sublink.siteLink} target='_blank' rel='noreferrer' title={sublink.title}>
+                {sublink.title}
+              </a>
+            ) : (
+              <Link to={sublink.siteLink} title={sublink.title}>
+                {sublink.title}
+              </Link>
+            )}
+            {sublink.links && sublink.links.length > 0 && (
+              <button
+                className={`${styles.mobileDropdown} ${rotation[i] ? styles.rotate : ''}`}
+                tabIndex='0'
+                aria-label='Toggle sub navigation'
+                onClick={() => {
+                  setRotation(prev => ({...prev, [i]: !prev[i]}))
+                  setCondition(prev => ({...prev, [i]: !prev[i]}))
+                }}
+              >
+                <Arrow />
+              </button>
+            )}
+          </span>
+          {condition[i] && <SubLinks links={sublink.links} condition={condition} setCondition={setCondition} rotation={rotation} setRotation={setRotation} />}
+        </li>
+      ))}
+    </ul>
+  )
+}
 
-    return () => {
-      window.removeEventListener('keydown', handleEsc)
-    }
-  }, [mobileStatus])
+function Navigation ({nav, main, top}) {
+  const [conditions, setConditions] = useState({})
+  const [rotations, setRotations] = useState({})
 
-  const toggleMobileNav = e => {
-    e.preventDefault()
-    // console.log('click')
-    setMobileStatus(mobileStatus === false)
+  const handleConditionChange = (index) => {
+    setConditions(prevState => ({
+      ...prevState,
+      [index]: !prevState[index]
+    }))
   }
 
-  const data = useStaticQuery(graphql`
-  {
-      mainNav:  sanityNavigation(_id: { eq: "mainNav" }) {
-        links {
-          _key
-          title
-          siteLink
-          links {
-            _key
-            title
-            siteLink
-            links {
-            _key
-            title
-            siteLink
-          }
-          }
-        }
-      }
-  }
-  `)
-  // console.log(data.topMiniNav)
   return (
     <>
-      <div className={styles.root}>
-        <div className={styles.wrapper} style={{zIndex: 2}}>
-          <div className={styles.innerWrapper}>
-            <nav className={styles.topMiniNav}>
-              <Navigation nav={data.topMiniNav} />
-            </nav>
-            <div className={styles.branding}>
-              <Link to='/' aria-label='Logo'>
-                <span className={styles.logoWrapper}><Logo /></span>
+      <ul className={main && styles.topMainNav} data-depth='0'>
+        {nav && nav.links && nav.links.map((link, i) => (
+          <li key={i} className={main && `${conditions[i] ? styles.toggled : ''}`}>
+            <span>
+              {link.siteLink && link.siteLink.startsWith('http') ? (
+                <a href={link.siteLink} target='_blank' rel='noopener noreferrer' title={link.title}>
+                  {link.title}
+                </a>
+              ) : (
+                <Link to={link.siteLink} title={link.title} className={main && styles.linkWithToggle}>
+                  {link.title}
+                </Link>
+              )}
+              {link.links && link.links.length > 0 && (
+                <button
+                  className={`${styles.mobileDropdown} ${rotations[i] ? styles.rotate : ''}`}
+                  tabIndex='0'
+                  aria-label='Toggle sub navigation'
+                  onClick={() => {
+                    setRotations(prev => ({...prev, [i]: !prev[i]}))
+                    handleConditionChange(i)
+                  }}
+                >
+                  <Arrow />
+                </button>
+              )}
+            </span>
+            {conditions[i] && <SubLinks links={link.links} condition={conditions} setCondition={setConditions} rotation={rotations} setRotation={setRotations} />}
+          </li>
+        ))}
+      </ul>
+      <ul className={top && styles.topMainNav}>
+        {top && top.links && top.links.map((link, i) => (
+          <li key={i} className={styles.hideOnDesktop}>
+            {link.siteLink && link.siteLink.startsWith('http') ? (
+              <a href={link.siteLink} target='_blank' rel='noopener noreferrer' title={link.title}>
+                {link.title}
+              </a>
+            ) : (
+              <Link to={link.siteLink} title={link.title}>
+                {link.title}
               </Link>
-            </div>
-            <button className={mobileStatus ? styles.menuToggleOn : styles.menuToggle} onClick={toggleMobileNav} aria-label='Click this to toggle the main navigation'><span /></button>
-
-            <nav className={cn(styles.nav, !mobileStatus ? styles.hideNav : styles.showNav)} role='navigation' aria-label='Main menu'>
-              <Navigation nav={data.mainNav} main top={data.topMiniNav} />
-            </nav>
-
-          </div>
-        </div>
-      </div>
-
+            )}
+          </li>
+        ))}
+      </ul>
     </>
   )
 }
 
-export default Header
+export default Navigation
