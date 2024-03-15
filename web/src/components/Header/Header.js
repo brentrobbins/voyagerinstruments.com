@@ -128,7 +128,6 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
     return convertLinks(data.links)
   }
   const mainNav = convertData(data.mainNav)
-  // console.log(mainNav)
 
   return (
     <>
