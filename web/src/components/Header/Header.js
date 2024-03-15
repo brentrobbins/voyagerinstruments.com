@@ -1,16 +1,11 @@
 import {Link, graphql, useStaticQuery} from 'gatsby'
 import React, {useEffect, useState} from 'react'
-// import Image from 'gatsby-image'
-// import Navigation from './Navigation'
 
 import Logo from '../../assets/svgs/logo.svg'
 
-import {cn} from '../../lib/helpers'
+// import {cn} from '../../lib/helpers'
 
 import styles from './header.module.css'
-
-// import MobileNav from './DropDownNav/MobileNav'
-// import Navbar from './DropDownNav/Navbar'
 
 import {NavDropdown, Container, Navbar, Nav} from 'react-bootstrap'
 import {DropdownSubmenu, NavDropdownMenu} from 'react-bootstrap-submenu'
