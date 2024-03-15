@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .root {
   width: 100%;
@@ -58,8 +58,6 @@
   }
 }
 
-
-
 .wrapper {
   display: flex;
   width: 100%;
@@ -73,18 +71,17 @@
   @media (--media-min-xxlarge) {
   }
   @media (--media-min-xxxlarge) {
-
   }
- @nest & .innerWrapper {
-   position: relative;
+  @nest & .innerWrapper {
+    position: relative;
     align-items: center;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
     max-width: 1440px;
     display: flex;
     margin: 0 auto;
     width: 100%;
     @media (--media-min-large) {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -142,9 +139,9 @@
 
 } */
 
-
 @media (--media-min-large) {
-  .nav > ul > li, .nav > ul > li > a {
+  .nav > ul > li,
+  .nav > ul > li > a {
     color: var(--color-blue-dark);
     transition: all 0.5s ease;
   }
@@ -162,7 +159,8 @@
       transition: all 250ms ease-in-out 0s;
     }
   }
-  .nav > ul > li:hover, .nav > ul > li > a:hover {
+  .nav > ul > li:hover,
+  .nav > ul > li > a:hover {
     color: var(--color-blue-darker);
     transition: all 280ms ease;
   }
@@ -174,8 +172,8 @@
   }
   .nav ul li ul li a:hover {
     @media (min-width: 1400px) {
-    color: var(--color-accent-light);
-    transition: all 0.5s ease;
+      color: var(--color-accent-light);
+      transition: all 0.5s ease;
     }
   }
 }
@@ -188,7 +186,7 @@
     transition-duration: 0.5s;
     cursor: pointer;
     /* padding: .5rem; */
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .nav ul li ul {
     visibility: hidden;
@@ -208,8 +206,7 @@
     background-clip: padding-box;
     min-width: 200px;
   }
-  .nav ul li:hover > ul
-  {
+  .nav ul li:hover > ul {
     visibility: visible;
     opacity: 1;
     /* display: block; */
@@ -225,7 +222,7 @@
   .nav ul li ul li a {
     color: #fff;
     margin: 0;
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
   /* .nav ul li ul:before {
     content:"";
@@ -240,12 +237,11 @@
   } */
 }
 
-
 @media (--media-min-large) {
   .nav li {
     display: block;
     /* padding: 15px 8px; */
-    margin: 0 .4rem;
+    margin: 0 0.4rem;
     padding: 0 0 5px 0;
     font-size: 16px;
   }
@@ -291,23 +287,21 @@
     font-family: var(--font-family-sans);
   }
   @nest & .topMainNav > li a[href="/search"] {
-
     @media (--media-min-large) {
-    /* padding: 0; */
-    margin-top: 2px;
-    background: no-repeat center center;
-    background-image: url( "data:image/svg+xml,%3Csvg height='48' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M46.697 41.04l-10.4-10.4c-.055-.054-.12-.093-.177-.145a19.583 19.583 0 0 0 3.24-10.815C39.36 8.811 30.55 0 19.68 0 8.811 0 0 8.811 0 19.68s8.811 19.68 19.68 19.68c3.996 0 7.711-1.194 10.815-3.24.052.057.09.122.145.178l10.4 10.399a4 4 0 0 0 5.657-5.657zM19.68 32.538c-7.101 0-12.858-5.757-12.858-12.858S12.579 6.822 19.68 6.822s12.858 5.757 12.858 12.858-5.757 12.858-12.858 12.858z' fill='%23808285' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-size: 40%;
-    height: 48px;
-    width: 48px;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    @nest &:hover {
-      background-image: url("data:image/svg+xml,%3Csvg height='48' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M46.697 41.04l-10.4-10.4c-.055-.054-.12-.093-.177-.145a19.583 19.583 0 0 0 3.24-10.815C39.36 8.811 30.55 0 19.68 0 8.811 0 0 8.811 0 19.68s8.811 19.68 19.68 19.68c3.996 0 7.711-1.194 10.815-3.24.052.057.09.122.145.178l10.4 10.399a4 4 0 0 0 5.657-5.657zM19.68 32.538c-7.101 0-12.858-5.757-12.858-12.858S12.579 6.822 19.68 6.822s12.858 5.757 12.858 12.858-5.757 12.858-12.858 12.858z' fill='%23268dda' fill-rule='evenodd'/%3E%3C/svg%3E");
-    }
-
+      /* padding: 0; */
+      margin-top: 2px;
+      background: no-repeat center center;
+      background-image: url("data:image/svg+xml,%3Csvg height='48' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M46.697 41.04l-10.4-10.4c-.055-.054-.12-.093-.177-.145a19.583 19.583 0 0 0 3.24-10.815C39.36 8.811 30.55 0 19.68 0 8.811 0 0 8.811 0 19.68s8.811 19.68 19.68 19.68c3.996 0 7.711-1.194 10.815-3.24.052.057.09.122.145.178l10.4 10.399a4 4 0 0 0 5.657-5.657zM19.68 32.538c-7.101 0-12.858-5.757-12.858-12.858S12.579 6.822 19.68 6.822s12.858 5.757 12.858 12.858-5.757 12.858-12.858 12.858z' fill='%23808285' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 40%;
+      height: 48px;
+      width: 48px;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      @nest &:hover {
+        background-image: url("data:image/svg+xml,%3Csvg height='48' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M46.697 41.04l-10.4-10.4c-.055-.054-.12-.093-.177-.145a19.583 19.583 0 0 0 3.24-10.815C39.36 8.811 30.55 0 19.68 0 8.811 0 0 8.811 0 19.68s8.811 19.68 19.68 19.68c3.996 0 7.711-1.194 10.815-3.24.052.057.09.122.145.178l10.4 10.399a4 4 0 0 0 5.657-5.657zM19.68 32.538c-7.101 0-12.858-5.757-12.858-12.858S12.579 6.822 19.68 6.822s12.858 5.757 12.858 12.858-5.757 12.858-12.858 12.858z' fill='%23268dda' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
     }
     @media (--media-min-xlarge) {
       background-size: 45%;
@@ -317,7 +311,6 @@
   @nest & .topMainNav li {
     /* text-transform: uppercase; */
     @nest &.hideOnDesktop {
-
       @media (--media-min-large) {
         display: none;
       }
@@ -352,14 +345,14 @@
       transition: all 0.1s ease-in-out;
     }
     @nest & .toggled span {
-      color: #1C6AA3;
+      color: #1c6aa3;
       transition: all 0.25s ease-in-out;
     }
     @nest & .toggled svg {
       transform: rotate(180deg);
       transition: all 0.25s ease-in-out;
       @nest & path {
-        fill: #1C6AA3;
+        fill: #1c6aa3;
         transition: all 0.25s ease-in-out;
       }
     }
@@ -375,7 +368,7 @@
       align-items: center;
       border-top: solid 1px #d4d4d4;
       padding: 0 0 0 12px;
-      font-size: .9rem;
+      font-size: 0.9rem;
       @nest & svg path {
         fill: #9e9e9e;
       }
@@ -383,7 +376,6 @@
     @nest & ul.topMainNav > li > a {
       border-top: solid 1px #d4d4d4;
       padding: 15px 12px;
-
     }
     @nest & li {
       margin: 0;
@@ -397,7 +389,7 @@
     }
     @nest & ul li a {
       /* margin-bottom: .8rem; */
-      font-size: .9rem;
+      font-size: 0.9rem;
       color: var(--color-black);
       border: 1px solid transparent;
       &:focus, &:active {
@@ -407,7 +399,7 @@
     }
 
     @nest & ul li ul li a {
-      padding: 15px 12px 15px 25px;
+      padding: 7px 12px 7px 25px;
     }
   }
   @media (--media-min-large) {
@@ -429,18 +421,18 @@
     z-index: 3;
     opacity: 0;
     top: 80px;
-    animation: appear .4s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
+    animation: appear 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
   @keyframes appear {
     0% {
-        opacity: 0;
-        top: 90px;
+      opacity: 0;
+      top: 90px;
     }
     100% {
-        opacity: 1;
-        top: 80px;
+      opacity: 1;
+      top: 80px;
     }
   }
   .hideNav {
@@ -449,16 +441,16 @@
     z-index: 3;
     opacity: 1;
     top: 0;
-    animation: hide .25s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
+    animation: hide 0.25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
   @keyframes hide {
     0% {
       z-index: 3;
       opacity: 1;
-        top: 60px;
+      top: 60px;
     }
     100% {
       z-index: 1;
@@ -469,7 +461,8 @@
   }
 }
 
-.menuToggle span, .menuToggleOn span {
+.menuToggle span,
+.menuToggleOn span {
   position: relative;
   display: block;
   width: 24px;
@@ -483,9 +476,11 @@
   transition: all 0.25s ease-in-out;
   margin: 0 auto;
 }
-.menuToggle span:before, .menuToggle span:after,
-.menuToggleOn span:before, .menuToggleOn span:after {
-  content: '';
+.menuToggle span:before,
+.menuToggle span:after,
+.menuToggleOn span:before,
+.menuToggleOn span:after {
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -494,30 +489,32 @@
   left: 50%;
   background: var(--color-accent-dark);
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
-.menuToggle:hover  span, .menuToggleOn:hover  span {
+.menuToggle:hover span,
+.menuToggleOn:hover span {
   color: #000000;
 }
 
-.menuToggleOn span{
+.menuToggleOn span {
   border-color: transparent;
 }
 .menuToggleOn span:before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .menuToggleOn span:after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.menuToggle, .menuToggleOn {
+.menuToggle,
+.menuToggleOn {
   border: none;
   cursor: pointer;
   outline: none;
@@ -533,7 +530,8 @@
     display: none;
   }
   border: 1px solid transparent;
-  &:focus, &:active{
+  &:focus,
+  &:active {
     border: 1px dashed var(--color-accent-light);
     outline: none;
   }
@@ -550,7 +548,8 @@
   height: 48px;
   cursor: pointer;
   border: 1px solid transparent;
-  &:focus, &:active {
+  &:focus,
+  &:active {
     border: 1px dashed var(--color-accent-light);
     outline: none;
   }
@@ -566,4 +565,24 @@ a.linkWithToggle {
     align-items: center;
     margin-right: 48px;
   }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.25s ease-in-out;
+  @nest & path {
+    fill: #1c6aa3;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
+/* Bootstrap Navbar */
+.NavBar {
+  width: 100%;
+  background-color: #fff !important;
+  padding: 0 !important;
+}
+
+.Nav {
+  margin: 0 0 0 auto;
 }
