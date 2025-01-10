@@ -207,3 +207,12 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     })
   }
 }
+
+exports.createSchemaCustomization = ({actions}) => {
+  const {createTypes} = actions
+  createTypes(`
+    type ImageSharp implements Node @childOf(types: ["File", "SanityImageAsset"]) {
+      id: ID!
+    }
+  `)
+}
