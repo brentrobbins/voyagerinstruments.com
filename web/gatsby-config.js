@@ -65,14 +65,14 @@ module.exports = {
     //     trackingId: 'UA-124696010-1'
     //   }
     // },
-    {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        // id: 'GTM-NR4SLDH',
-        id: 'G-CS9W7NL6V6',
-        includeInDevelopment: false
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-tagmanager',
+    //   options: {
+    //     // id: 'GTM-NR4SLDH',
+    //     id: 'G-CS9W7NL6V6',
+    //     includeInDevelopment: false
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
